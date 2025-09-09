@@ -1,2091 +1,2357 @@
 ---
 outputs: []
-
 codecs:
-- module: aioampio.codec.ampio
-
+  - module: aioampio.codec.ampio
 floors:
-- id: parter1
-  name: Parter
-  level: 0
-  areas:
-  - id: garaz1
-    name: Garaż
-    icon: mdi:car
-  - id: gabinet1
-    name: Gabinet
-    icon: mdi:desk
-  - id: salon1
-    name: Salon
-    icon: mdi:sofa
-  - id: serwerownia1
-    name: Serwerownia
-    icon: mdi:server
-  - id: kuchnia1
-    name: Kuchnia
-    icon: mdi:fridge
-  - id: kotlownia1
-    name: Kotłownia
-    icon: mdi:heating-coil
-  - id: hall1
-    name: Przedpokój
-    icon: mdi:walk
-  - id: toaleta1
-    name: Toaleta
-    icon: mdi:toilet
-
-- id: pietro1
-  name: Piętro
-  level: 1
-  areas:
-  - id: silownia1
-    name: Siłownia
-    icon: mdi:gymnastics
-  - id: emilia1
-    name: Pokój Emilii
-    icon: mdi:account
-  - id: goscinny1
-    name: Pokój gościnny
-    icon: mdi:room-service
-  - id: sypialnia1
-    name: Sypialnia
-    icon: mdi:bed-king
-  - id: lazienka1
-    name: Mała łazienka
-    icon: mdi:shower-head
-  - id: lazienka2
-    name: Duża łazienka
-    icon: mdi:bathtub
-  - id: pralnia1
-    name: Pralnia
-    icon: mdi:washing-machine
-  - id: korytarz1
-    name: Korytarz
-    icon: mdi:walk
-areas:
-- id: ogrod1
-  name: Ogród
-  icon: mdi:flower
-
-devices:
-# MSENs
-- can_id: 0x26c7
-  name: Toaleta
-  model: 44
-  pcb: 2
-  sw_version: 10400
-  area: Toaleta
-  sensors:
-  - id: temperature1
-    name: Temperatura
-    states: temperature.1
-    device_class: temperature
-  - id: humidity1
-    name: Wilgotność
-    states: s16b.1
-    device_class: humidity
-  - id: rap1
-    name: Ciśnienie względne
-    states: s16b.3
-    device_class: atmospheric_pressure
-
-- can_id: 0x26d2
-  name: Garderoba Parter
-  model: 44
-  pcb: 2
-  sw_version: 10400
-  area: Przedpokój
-  sensors:
-  - id: temperature1
-    name: Temperatura
-    states: temperature.1
-    device_class: temperature
-  - id: humidity1
-    name: Wilgotność
-    states: s16b.1
-    device_class: humidity
-  - id: rap1
-    name: Ciśnienie względne
-    states: s16b.3
-    device_class: atmospheric_pressure
-
-- can_id: 0x2144
-  name: Serwerownia
-  model: 44
-  pcb: 1
-  sw_version: 10400
-  area: Serwerownia
-  sensors:
-  - id: temperature1
-    name: Temperatura
-    states: temperature.1
-    device_class: temperature
-  - id: humidity1
-    name: Wilgotność
-    states: s16b.1
-    device_class: humidity
-  - id: rap1
-    name: Ciśnienie względne
-    states: s16b.3
-    device_class: atmospheric_pressure
-
-# NEW MSENs
-- can_id: 0x6f3b
-  name: Gabinet
-  model: 44
-  pcb: 3
-  sw_version: 63
-  area: Gabinet
-  sensors:
-  - id: temperature1
-    name: Temperatura
-    device_class: temperature
-    states: temperature.1
-  - id: humidity1
-    name: Wilgotność
-    states: s16b10000.1
-    device_class: humidity
-  - id: aap1
-    name: Ciśnienie bezwzględne
-    states: s16b10000.2
-    device_class: atmospheric_pressure
-  - id: noise1
-    name: Hałas
-    states: s16b10000.3
-    device_class: sound_pressure
-  - id: brightness1
-    name: Jasność
-    states: s16b10000.4
-    device_class: illuminance
-  - id: aqi1
-    name: Jakość powietrza
-    states: s16b10000.5
-    device_class: aqi
-  - id: rap1
-    name: Ciśnienie względne
-    states: s16b10000.6
-    device_class: atmospheric_pressure
-
-- can_id: 0x6f41
-  name: Garaż
-  model: 44
-  pcb: 3
-  sw_version: 63
-  area: Garaż
-  sensors:
-  - id: temperature1
-    name: Temperatura
-    device_class: temperature
-    states: temperature.1
-  - id: humidity1
-    name: Wilgotność
-    states: s16b10000.1
-    device_class: humidity
-  - id: aap1
-    name: Ciśnienie bezwzględne
-    states: s16b10000.2
-    device_class: atmospheric_pressure
-  - id: noise1
-    name: Hałas
-    states: s16b10000.3
-    device_class: sound_pressure
-  - id: brightness1
-    name: Jasność
-    states: s16b10000.4
-    device_class: illuminance
-  - id: aqi1
-    name: Jakość powietrza
-    states: s16b10000.5
-    device_class: aqi
-  - id: rap1
-    name: Ciśnienie względne
-    states: s16b10000.6
-    device_class: atmospheric_pressure
-
-- can_id: 0x6f45
-  name: Przedpokój
-  model: 44
-  pcb: 3
-  sw_version: 63
-  area: Przedpokój
-  sensors:
-  - id: temperature1
-    name: Temperatura
-    device_class: temperature
-    states: temperature.1
-  - id: humidity1
-    name: Wilgotność
-    states: s16b10000.1
-    device_class: humidity
-  - id: aap1
-    name: Ciśnienie bezwzględne
-    states: s16b10000.2
-    device_class: atmospheric_pressure
-  - id: noise1
-    name: Hałas
-    states: s16b10000.3
-    device_class: sound_pressure
-  - id: brightness1
-    name: Jasność
-    states: s16b10000.4
-    device_class: illuminance
-  - id: aqi1
-    name: Jakość powietrza
-    states: s16b10000.5
-    device_class: aqi
-  - id: rap1
-    name: Ciśnienie względne
-    states: s16b10000.6
-    device_class: atmospheric_pressure
-
-- can_id: 0x6f49
-  name: Pokój Emilii
-  model: 44
-  pcb: 3
-  sw_version: 63
-  area: Pokój Emilii
-  sensors:
-  - id: temperature1
-    name: Temperatura
-    device_class: temperature
-    states: temperature.1
-  - id: humidity1
-    name: Wilgotność
-    states: s16b10000.1
-    device_class: humidity
-  - id: aap1
-    name: Ciśnienie bezwzględne
-    states: s16b10000.2
-    device_class: atmospheric_pressure
-  - id: noise1
-    name: Hałas
-    states: s16b10000.3
-    device_class: sound_pressure
-  - id: brightness1
-    name: Jasność
-    states: s16b10000.4
-    device_class: illuminance
-  - id: aqi1
-    name: Jakość powietrza
-    states: s16b10000.5
-    device_class: aqi
-  - id: rap1
-    name: Ciśnienie względne
-    states: s16b10000.6
-    device_class: atmospheric_pressure
-
-- can_id: 0x6f4a
-  name: Kotłownia
-  model: 44
-  pcb: 3
-  sw_version: 63
-  area: Kotłownia
-  sensors:
-  - id: temperature1
-    name: Temperatura
-    device_class: temperature
-    states: temperature.1
-  - id: humidity1
-    name: Wilgotność
-    states: s16b10000.1
-    device_class: humidity
-  - id: aap1
-    name: Ciśnienie bezwzględne
-    states: s16b10000.2
-    device_class: atmospheric_pressure
-  - id: noise1
-    name: Hałas
-    states: s16b10000.3
-    device_class: sound_pressure
-  - id: brightness1
-    name: Jasność
-    states: s16b10000.4
-    device_class: illuminance
-  - id: aqi1
-    name: Jakość powietrza
-    states: s16b10000.5
-    device_class: aqi
-  - id: rap1
-    name: Ciśnienie względne
-    states: s16b10000.6
-    device_class: atmospheric_pressure
-
-- can_id: 0x6f4d
-  name: Korytarz
-  model: 44
-  pcb: 3
-  sw_version: 63
-  area: Korytarz
-  sensors:
-  - id: temperature1
-    name: Temperatura
-    device_class: temperature
-    states: temperature.1
-  - id: humidity1
-    name: Wilgotność
-    states: s16b10000.1
-    device_class: humidity
-  - id: aap1
-    name: Ciśnienie bezwzględne
-    states: s16b10000.2
-    device_class: atmospheric_pressure
-  - id: noise1
-    name: Hałas
-    states: s16b10000.3
-    device_class: sound_pressure
-  - id: brightness1
-    name: Jasność
-    states: s16b10000.4
-    device_class: illuminance
-  - id: aqi1
-    name: Jakość powietrza
-    states: s16b10000.5
-    device_class: aqi
-  - id: rap1
-    name: Ciśnienie względne
-    states: s16b10000.6
-    device_class: atmospheric_pressure
-
-- can_id: 0x6f4f
-  name: Siłownia
-  model: 44
-  pcb: 3
-  sw_version: 1
-  area: Siłownia
-  sensors:
-  - id: temperature1
-    name: Temperatura
-    device_class: temperature
-    states: temperature.1
-  - id: humidity1
-    name: Wilgotność
-    states: s16b10000.1
-    device_class: humidity
-  - id: aap1
-    name: Ciśnienie bezwzględne
-    states: s16b10000.2
-    device_class: atmospheric_pressure
-  - id: noise1
-    name: Hałas
-    states: s16b10000.3
-    device_class: sound_pressure
-  - id: brightness1
-    name: Jasność
-    states: s16b10000.4
-    device_class: illuminance
-  - id: aqi1
-    name: Jakość powietrza
-    states: s16b10000.5
-    device_class: aqi
-  - id: rap1
-    name: Ciśnienie względne
-    states: s16b10000.6
-    device_class: atmospheric_pressure
-
-- can_id: 0x6f55
-  name: Mała łazienka
-  model: 44
-  pcb: 3
-  sw_version: 1
-  area: Mała łazienka
-  sensors:
-  - id: temperature1
-    name: Temperatura
-    device_class: temperature
-    states: temperature.1
-  - id: humidity1
-    name: Wilgotność
-    states: s16b10000.1
-    device_class: humidity
-  - id: aap1
-    name: Ciśnienie bezwzględne
-    states: s16b10000.2
-    device_class: atmospheric_pressure
-  - id: noise1
-    name: Hałas
-    states: s16b10000.3
-    device_class: sound_pressure
-  - id: brightness1
-    name: Jasność
-    states: s16b10000.4
-    device_class: illuminance
-  - id: aqi1
-    name: Jakość powietrza
-    states: s16b10000.5
-    device_class: aqi
-  - id: rap1
-    name: Ciśnienie względne
-    states: s16b10000.6
-    device_class: atmospheric_pressure
-
-- can_id: 0x6f56
-  name: Pokój gościnny
-  model: 44
-  pcb: 3
-  sw_version: 1
-  area: Pokój gościnny
-  sensors:
-  - id: temperature1
-    name: Temperatura
-    device_class: temperature
-    states: temperature.1
-  - id: humidity1
-    name: Wilgotność
-    states: s16b10000.1
-    device_class: humidity
-  - id: aap1
-    name: Ciśnienie bezwzględne
-    states: s16b10000.2
-    device_class: atmospheric_pressure
-  - id: noise1
-    name: Hałas
-    states: s16b10000.3
-    device_class: sound_pressure
-  - id: brightness1
-    name: Jasność
-    states: s16b10000.4
-    device_class: illuminance
-  - id: aqi1
-    name: Jakość powietrza
-    states: s16b10000.5
-    device_class: aqi
-  - id: rap1
-    name: Ciśnienie względne
-    states: s16b10000.6
-    device_class: atmospheric_pressure
-
-- can_id: 0x6f7c
-  name: Pralnia
-  model: 44
-  pcb: 3
-  sw_version: 1
-  area: Pralnia
-  sensors:
-  - id: temperature1
-    name: Temperatura
-    device_class: temperature
-    states: temperature.1
-  - id: humidity1
-    name: Wilgotność
-    states: s16b10000.1
-    device_class: humidity
-  - id: aap1
-    name: Ciśnienie bezwzględne
-    states: s16b10000.2
-    device_class: atmospheric_pressure
-  - id: noise1
-    name: Hałas
-    states: s16b10000.3
-    device_class: sound_pressure
-  - id: brightness1
-    name: Jasność
-    states: s16b10000.4
-    device_class: illuminance
-  - id: aqi1
-    name: Jakość powietrza
-    states: s16b10000.5
-    device_class: aqi
-  - id: rap1
-    name: Ciśnienie względne
-    states: s16b10000.6
-    device_class: atmospheric_pressure
-
-- can_id: 0x711f
-  name: Duża łazienka
-  model: 44
-  pcb: 3
-  sw_version: 1
-  area: Duża łazienka
-  sensors:
-  - id: temperature1
-    name: Temperatura
-    device_class: temperature
-    states: temperature.1
-  - id: humidity1
-    name: Wilgotność
-    states: s16b10000.1
-    device_class: humidity
-  - id: aap1
-    name: Ciśnienie bezwzględne
-    states: s16b10000.2
-    device_class: atmospheric_pressure
-  - id: noise1
-    name: Hałas
-    states: s16b10000.3
-    device_class: sound_pressure
-  - id: brightness1
-    name: Jasność
-    states: s16b10000.4
-    device_class: illuminance
-  - id: aqi1
-    name: Jakość powietrza
-    states: s16b10000.5
-    device_class: aqi
-  - id: rap1
-    name: Ciśnienie względne
-    states: s16b10000.6
-    device_class: atmospheric_pressure
-
-- can_id: 0x6f5f
-  name: Salon
-  model: 44
-  pcb: 3
-  sw_version: 1
-  area: Salon
-  sensors:
-  - id: temperature1
-    name: Temperatura
-    device_class: temperature
-    states: temperature.1
-  - id: humidity1
-    name: Wilgotność
-    states: s16b10000.1
-    device_class: humidity
-  - id: aap1
-    name: Ciśnienie bezwzględne
-    states: s16b10000.2
-    device_class: atmospheric_pressure
-  - id: noise1
-    name: Hałas
-    states: s16b10000.3
-    device_class: sound_pressure
-  - id: brightness1
-    name: Jasność
-    states: s16b10000.4
-    device_class: illuminance
-  - id: aqi1
-    name: Jakość powietrza
-    states: s16b10000.5
-    device_class: aqi
-  - id: rap1
-    name: Ciśnienie względne
-    states: s16b10000.6
-    device_class: atmospheric_pressure
-
-- can_id: 0x19c7
-  name: Ściemniacz 1
-  model: 5
-  pcb: 2
-  sw_version: 10013
-  area: Serwerownia
-  lights:
-  - id: light1
-    name: Pokój Emilii
-    states: [ aout.1, binout.25 ]
-    area: Pokój Emilii
-  - id: light2
-    name: Światło w siłowni
-    states: [ aout.2, binout.26 ]
-    area: Siłownia
-  - id: light3
-    name: Korytarz
-    states: [ aout.3, binout.27 ]
-    area: Korytarz
-  - id: light4
-    name: Garderoba siłownia
-    states: [ aout.4, binout.28 ]
-    area: Siłownia
-  - id: light5
-    name: Garderoba w sypialni
-    states: [ aout.5, binout.29 ]
-    area: Sypialnia
-  - id: light6
-    name: Wiatrak w sypialni
-    states: [ aout.6, binout.30 ]
-    area: Sypialnia
-  - id: light7
-    name: Taras
-    states: [ aout.7, binout.31 ]
-    area: Ogród
-  - id: light8
-    name: Stół jadalny
-    states: [ aout.8, binout.32 ]
-    area: Kuchnia
-
-- can_id: 0x13ec
-  name: Ściemniacz 2
-  model: 5
-  pcb: 2
-  sw_version: 10013
-  area: Serwerownia
-  lights:
-  - id: light1
-    name: Kinkiet Korytarz
-    states: [ aout.1, binout.25 ]
-    area: Korytarz
-  - id: light2
-    name: Światło w spiżarni
-    states: [ aout.2, binout.26 ]
-    area: Kuchnia
-  - id: light3
-    name: Garderoba
-    states: [ aout.3, binout.27 ]
-    area: Przedpokój
-  - id: light4
-    name: Kanapa
-    states: [ aout.4, binout.28 ]
-    area: Salon
-  - id: light5
-    name: Gabinet
-    states: [ aout.5, binout.29 ]
-    area: Gabinet
-  - id: light6
-    name: Schody
-    states: [ aout.6, binout.30 ]
-    area: Korytarz
-  - id: light7
-    name: Emilia Garderoba
-    states: [ aout.7, binout.31 ]
-    area: Pokój Emilii
-  - id: light8
-    name: Pokój gościnny
-    states: [ aout.8, binout.32 ]
-    area: Pokój gościnny
-
-# MRGBW
-- can_id: 0x1879
-  name: Salon
-  model: 12
-  pcb: 6
-  sw_version: 10010
-  area: Serwerownia
-  lights:
-  - id: light1
-    name: LED Salon
-    states: [ rgb.1, binout.25, binout.26, binout.27, binout.28 ]
-    area: Salon
-
-- can_id: 0x18b2
-  name: Wanna
-  model: 12
-  pcb: 6
-  sw_version: 10010
-  area: Duża łazienka
-  lights:
-  - id: light1
-    name: LED Wanna
-    states: [ rgb.1, binout.25, binout.26, binout.27, binout.28 ]
-    area: Duża łazienka
-
-- can_id: 0x1ab3
-  name: Schody
-  model: 12
-  pcb: 6
-  sw_version: 10010
-  area: Korytarz
-  lights:
-  - id: light1
-    name: LED Schody
-    states: [ rgb.1, binout.25, binout.26, binout.27, binout.28 ]
-    area: Korytarz
-
-# NOT CONNECTED
-# - can_id: 0x1ab6
-#   name: Telewizor
-#   model: 12
-#   pcb: 6
-#   sw_version: 10010
-#   area: Salon
-#   lights:
-#     - id: light1
-#       name: LED Telewizor
-#       states: [rgb.1, binout.25, binout.26, binout.27, binout.28]
-#       area: Salon
-
-- can_id: 0x1885
-  name: LED
-  model: 26
-  pcb: 2
-  sw_version: 10119
-  area: Serwerownia
-  lights:
-  - id: light1
-    name: Lustro
-    states: [ aout.1, binout.25 ]
-    area: Duża łazienka
-  - id: light2
-    name: Lustro
-    states: [ aout.2, binout.26 ]
-    area: Mała łazienka
-  - id: light3
-    name: Lustro
-    states: [ aout.3, binout.27 ]
-    area: Toaleta
-
-- can_id: 0x1b88
-  name: Zegar Ogrzewanie
-  model: 22
-  pcb: 3
-  sw_version: 10559
-  area: Serwerownia
-  climates:
-  - id: climate1
-    name: Ogrzewanie korytarz
-    states: [ heating.1, zone.1 ]
-    area: Korytarz
-  - id: climate2
-    name: Ogrzewanie garaż
-    states: [ heating.2, zone.2 ]
-    area: Garaż
-  - id: climate3
-    name: Ogrzewanie salon
-    states: [ heating.3, zone.3 ]
-    area: Salon
-  - id: climate4
-    name: Ogrzewanie gabinet
-    states: [ heating.4, zone.4 ]
-    area: Gabinet
-  - id: climate5
-    name: Ogrzewanie toaleta
-    states: [ heating.5, zone.5 ]
-    area: Toaleta
-  - id: climate6
-    name: Ogrzewanie emilia
-    states: [ heating.6, zone.6 ]
-    area: Pokój Emilii
-  - id: climate7
-    name: Ogrzewanie siłownia
-    states: [ heating.7, zone.7 ]
-    area: Siłownia
-  - id: climate8
-    name: Ogrzewanie duża łazienka
-    states: [ heating.8, zone.8 ]
-    area: Duża łazienka
-  - id: climate9
-    name: Ogrzewanie sypialnia
-    states: [ heating.9, zone.9 ]
-    area: Sypialnia
-  - id: climate10
-    name: Ogrzewanie gościnny
-    states: [ heating.10, zone.10 ]
-    area: Pokój gościnny
-  - id: climate11
-    name: Ogrzewanie mała łazienka
-    states: [ heating.11, zone.11 ]
-    area: Mała łazienka
-
-- can_id: 0x1a1c
-  name: Ogrzewanie
-  model: 4
-  pcb: 5
-  area: Serwerownia
-  binary_sensors:
-  - id: switch1
-    name: Ogrzewanie przedpokój
-    area: Przedpokój
-    states: [ binout.25 ]
-    device_class: heat
-  - id: switch2
-    name: Ogrzewanie garaż
-    area: Garaż
-    states: [ binout.26 ]
-    device_class: heat
-  - id: switch3
-    name: Ogrzewanie salon
-    area: Salon
-    states: [ binout.27 ]
-    device_class: heat
-  - id: switch4
-    name: Ogrzewanie gabinet
-    area: Gabinet
-    states: [ binout.28 ]
-    device_class: heat
-  - id: switch5
-    name: Ogrzewanie toaleta
-    area: Toaleta
-    states: [ binout.29 ]
-    device_class: heat
-  - id: switch6
-    name: Ogrzewanie emilia
-    area: Pokój Emilii
-    states: [ binout.30 ]
-    device_class: heat
-  - id: switch7
-    name: Ogrzewanie siłownia
-    area: Siłownia
-    states: [ binout.31 ]
-    device_class: heat
-  - id: switch8
-    name: Ogrzewanie duża łazienka
-    area: Duża łazienka
-    states: [ binout.32 ]
-    device_class: heat
-
-- can_id: 0x1a1e
-  name: Oświetlenie 1
-  model: 4
-  pcb: 5
-  sw_version: 10400
-  area: Serwerownia
-  binary_sensors:
-  - id: input1
-    name: Mała łazienka L
-    states: [ binout.1 ]
-    area: Mała łazienka
-  - id: input2
-    name: Mała łazienka P
-    states: [ binout.2 ]
-    area: Mała łazienka
-  lights:
-  - id: light1
-    name: Komoda
-    states: [ binout.25 ]
-    area: Salon
-  - id: light2
-    name: Blat kuchenny
-    states: [ binout.26 ]
-  - id: light3
-    name: Garaż boczne
-    states: [ binout.27 ]
-    area: Garaż
-  - id: light4
-    name: Serwerownia
-    states: [ binout.28 ]
-    area: Serwerownia
-  - id: light5
-    name: Garaż środkowe
-    states: [ binout.29 ]
-    area: Garaż
-  - id: light6
-    name: Garaż tylne
-    states: [ binout.30 ]
-    area: Garaż
-  - id: light7
-    name: Kotłownia
-    states: [ binout.31 ]
-    area: Kotłownia
-  - id: light8
-    name: Galeryjki
-    states: [ binout.32 ]
-    area: Korytarz
-  buttons:
-  - id: button1
-    name: Łazienka 1P Lewy
-    area: Mała łazienka
-    states: [ binout.25 ]
-  - id: button2
-    name: Łazienka 1P Prawy
-    area: Mała łazienka
-    states: [ binout.26 ]
-
-- can_id: 0x1a22
-  name: Oświetlenie zewnętrzne
-  model: 4
-  pcb: 5
-  sw_version: 10400
-  area: Serwerownia
-  binary_sensors:
-  - id: input1
-    name: Sypialnia łóżko LL
-    states: [ binout.1 ]
-    area: Sypialnia
-  - id: input2
-    name: Sypialnia łóżko LP
-    states: [ binout.2 ]
-    area: Sypialnia
-  - id: input3
-    name: Sypialnia łóżko PL
-    states: [ binout.3 ]
-    area: Sypialnia
-  - id: input4
-    name: Sypialnia łóżko PL
-    states: [ binout.4 ]
-    area: Sypialnia
-  lights:
-  - id: light1
-    name: Duże okno
-    states: [ binout.25 ]
-    area: Ogród
-  - id: light2
-    name: E Elewacja
-    states: [ binout.26 ]
-    area: Ogród
-  - id: light3
-    name: S Elewacja
-    states: [ binout.27 ]
-    area: Ogród
-  - id: light4
-    name: W Elewacja
-    states: [ binout.28 ]
-    area: Ogród
-  - id: light5
-    name: Bonsai
-    states: [ binout.29 ]
-    area: Ogród
-  - id: light6
-    name: N Elewacja
-    states: [ binout.30 ]
-    area: Ogród
-  - id: light7
-    name: Wejście
-    states: [ binout.31 ]
-    area: Ogród
-  - id: light8
-    name: Taras nad garażem
-    states: [ binout.32 ]
-    area: Ogród
-
-- can_id: 0x1a23
-  name: Szafa Rack
-  model: 4
-  pcb: 5
-  sw_version: 10400
-  area: Serwerownia
-  switches:
-  - id: switch1
-    name: Blokowanie alarmu
-    states: [ binout.25 ]
-    area: Serwerownia
-  - id: switch2
-    name: Gniazda 2 poziom
-    states: [ binout.26 ]
-    area: Serwerownia
-    device_class: outlet
-  binary_sensors:
-  - id: rain1
-    name: Czujnik deszczu
-    states: [ binout.1 ]
-    area: Ogród
-    device_class: moisture
-
-- can_id: 0x1ae0
-  name: Ogrzewanie 2 / Ośw. zewn.
-  model: 4
-  pcb: 5
-  sw_version: 10400
-  area: Serwerownia
-  binary_sensors:
-  - id: switch1
-    name: Ogrzewanie sypialnia
-    area: Sypialnia
-    states: [ binout.25 ]
-    device_class: heat
-  - id: switch2
-    name: Ogrzewanie pokój gościnny
-    area: Pokój gościnny
-    states: [ binout.26 ]
-    device_class: heat
-  - id: switch3
-    name: Ogrzewanie mała łazienka
-    area: Mała łazienka
-    states: [ binout.27 ]
-    device_class: heat
-
-  - id: input1
-    name: Sypialnia garderoba L
-    states: [ binout.1 ]
-    area: Sypialnia
-  - id: input2
-    name: Sypialnia garderoba P
-    states: [ binout.2 ]
-    area: Sypialnia
-  - id: input3
-    name: Kuchnia blat L
-    states: [ binout.3 ]
-    area: Kuchnia
-  - id: input4
-    name: Kuchnia blat P
-    states: [ binout.4 ]
-    area: Kuchnia
-  lights:
-  - id: light4
-    name: Naświetlacz taras
-    states: [ binout.28 ]
-    area: Ogród
-  - id: light5
-    name: Halogen nad garażem
-    states: [ binout.29 ]
-    area: Ogród
-  - id: light6
-    name: Naświetlacz basen
-    states: [ binout.30 ]
-    area: Ogród
-  - id: light7
-    name: Halogeny północ
-    states: [ binout.31 ]
-    area: Ogród
-  - id: light8
-    name: Naświetlacz podjazd
-    states: [ binout.32 ]
-    area: Ogród
-
-- can_id: 0x241b
-  name: Przekazniki pomocnicze
-  model: 4
-  pcb: 7
-  sw_version: 10400
-  area: Serwerownia
-  switches:
-  - id: switch1
-    name: Rekuperator wilgotność
-    states: [ binout.25 ]
-    area: Serwerownia
-  - id: switch2
-    name: Rekuperator wentylacja
-    states: [ binout.26 ]
-    area: Serwerownia
-  - id: switch3
-    name: Rekuperator CO2
-    states: [ binout.27 ]
-    area: Serwerownia
-  - id: switch4
-    name: Stycznik po wyjściu
-    states: [ binout.28 ]
-    area: Serwerownia
-  - id: switch5
-    name: Stycznik wakacje
-    states: [ binout.29 ]
-    area: Serwerownia
-  - id: switch6
-    name: Gniazdo taras
-    states: [ binout.30 ]
-    area: Ogród
-    device_class: outlet
-  - id: switch7
-    name: Gniazdo ogród
-    states: [ binout.31 ]
-    area: Ogród
-    device_class: outlet
-  - id: switch8
-    name: Gniazdo front
-    states: [ binout.32 ]
-    area: Ogród
-    device_class: outlet
-
-- can_id: 0x1e5a
-  name: Duża łazienka 10 Mała łazienka 06
-  model: 17
-  pcb: 3
-  sw_version: 10059
-  area: Serwerownia
-  lights:
-  - id: light1
-    name: MLED Duża łazienka 01
-    states: [ aout.1, binout.25 ]
-    area: Duża łazienka
-  - id: light2
-    name: MLED Duża łazienka 02
-    states: [ aout.2, binout.26 ]
-    area: Duża łazienka
-  - id: light3
-    name: MLED Duża łazienka 03
-    states: [ aout.3, binout.27 ]
-    area: Duża łazienka
-  - id: light4
-    name: MLED Duża łazienka 04
-    states: [ aout.4, binout.28 ]
-    area: Duża łazienka
-  - id: light5
-    name: MLED Duża łazienka 05
-    states: [ aout.5, binout.29 ]
-    area: Duża łazienka
-  - id: light6
-    name: MLED Duża łazienka 06
-    states: [ aout.6, binout.30 ]
-    area: Duża łazienka
-  - id: light7
-    name: MLED Duża łazienka 07
-    states: [ aout.7, binout.31 ]
-    area: Duża łazienka
-  - id: light8
-    name: MLED Duża łazienka 08
-    states: [ aout.8, binout.32 ]
-    area: Duża łazienka
-  - id: light9
-    name: MLED Duża łazienka 09
-    states: [ aout.9, binout.33 ]
-    area: Duża łazienka
-  - id: light10
-    name: MLED Duża łazienka 10
-    states: [ aout.10, binout.34 ]
-    area: Duża łazienka
-  - id: light11
-    name: MLED Mała łazienka 01
-    states: [ aout.11, binout.35 ]
-    area: Mała łazienka
-  - id: light12
-    name: MLED Mała łazienka 02
-    states: [ aout.12, binout.36 ]
-    area: Mała łazienka
-  - id: light13
-    name: MLED Mała łazienka 03
-    states: [ aout.13, binout.37 ]
-    area: Mała łazienka
-  - id: light14
-    name: MLED Mała łazienka 04
-    states: [ aout.14, binout.38 ]
-    area: Mała łazienka
-  - id: light15
-    name: MLED Mała łazienka 05
-    states: [ aout.15, binout.39 ]
-    area: Mała łazienka
-  - id: light16
-    name: MLED Mała łazienka 06
-    states: [ aout.16, binout.40 ]
-    area: Mała łazienka
-
-- can_id: 0x1e53
-  name: Wiatrołap 06 Toaleta 02 Prania 1
-  model: 17
-  pcb: 8
-  sw_version: 11701
-  area: Serwerownia
-  lights:
-  - id: light1
-    name: MLED Wiatrołap 01
-    states: [ aout.1, binout.25 ]
-    area: Przedpokój
-  - id: light2
-    name: MLED Wiatrołap 02
-    states: [ aout.2, binout.26 ]
-    area: Przedpokój
-  - id: light3
-    name: MLED Wiatrołap 03
-    states: [ aout.3, binout.27 ]
-    area: Przedpokój
-  - id: light4
-    name: MLED Wiatrołap 04
-    states: [ aout.4, binout.28 ]
-    area: Przedpokój
-  - id: light5
-    name: MLED Wiatrołap 05
-    states: [ aout.5, binout.29 ]
-    area: Przedpokój
-  - id: light6
-    name: MLED Wiatrołap 06
-    states: [ aout.6, binout.30 ]
-    area: Przedpokój
-  - id: light7
-    name: MLED Toaleta 01
-    states: [ aout.7, binout.31 ]
-    area: Toaleta
-  - id: light8
-    name: MLED Toaleta 02
-    states: [ aout.8, binout.32 ]
-    area: Toaleta
-  - id: light9
-    name: MLED Prania 01
-    states: [ aout.9, binout.33 ]
-    area: Pralnia
-
-- can_id: 0x1e5f
-  name: Kuchnia 10 Sofa 06
-  model: 17
-  pcb: 8
-  sw_version: 11701
-  area: Serwerownia
-  lights:
-  - id: light1
-    name: MLED Kuchnia 01
-    states: [ aout.1, binout.25 ]
-    area: Kuchnia
-  - id: light2
-    name: MLED Kuchnia 02
-    states: [ aout.2, binout.26 ]
-    area: Kuchnia
-  - id: light3
-    name: MLED Kuchnia 03
-    states: [ aout.3, binout.27 ]
-    area: Kuchnia
-  - id: light4
-    name: MLED Kuchnia 04
-    states: [ aout.4, binout.28 ]
-    area: Kuchnia
-  - id: light5
-    name: MLED Kuchnia 05
-    states: [ aout.5, binout.29 ]
-    area: Kuchnia
-  - id: light6
-    name: MLED Kuchnia 06
-    states: [ aout.6, binout.30 ]
-    area: Kuchnia
-  - id: light7
-    name: MLED Kuchnia 07
-    states: [ aout.7, binout.31 ]
-    area: Kuchnia
-  - id: light8
-    name: MLED Kuchnia 08
-    states: [ aout.8, binout.32 ]
-    area: Kuchnia
-  - id: light9
-    name: MLED Kuchnia 09
-    states: [ aout.9, binout.33 ]
-    area: Kuchnia
-  - id: light10
-    name: MLED Kuchnia 10
-    states: [ aout.10, binout.34 ]
-    area: Kuchnia
-  - id: light11
-    name: MLED Sofa 01
-    states: [ aout.11, binout.35 ]
-    area: Salon
-  - id: light12
-    name: MLED Sofa 02
-    states: [ aout.12, binout.36 ]
-    area: Salon
-  - id: light13
-    name: MLED Sofa 03
-    states: [ aout.13, binout.37 ]
-    area: Salon
-  - id: light14
-    name: MLED Sofa 04
-    states: [ aout.14, binout.38 ]
-    area: Salon
-  - id: light15
-    name: MLED Sofa 05
-    states: [ aout.15, binout.39 ]
-    area: Salon
-  - id: light16
-    name: MLED Sofa 06
-    states: [ aout.16, binout.40 ]
-    area: Salon
-
-- can_id: 0x1e5d
-  name: Salon 12 Przedpokój 04
-  model: 17
-  pcb: 8
-  sw_version: 11701
-  area: Serwerownia
-  lights:
-  - id: light1
-    name: MLED Salon 01
-    states: [ aout.1, binout.25 ]
-    area: Salon
-  - id: light2
-    name: MLED Salon 02
-    states: [ aout.2, binout.26 ]
-    area: Salon
-  - id: light3
-    name: MLED Salon 03
-    states: [ aout.3, binout.27 ]
-    area: Salon
-  - id: light4
-    name: MLED Salon 04
-    states: [ aout.4, binout.28 ]
-    area: Salon
-  - id: light5
-    name: MLED Salon 05
-    states: [ aout.5, binout.29 ]
-    area: Salon
-  - id: light6
-    name: MLED Salon 06
-    states: [ aout.6, binout.30 ]
-    area: Salon
-  - id: light7
-    name: MLED Salon 07
-    states: [ aout.7, binout.31 ]
-    area: Salon
-  - id: light8
-    name: MLED Salon 08
-    states: [ aout.8, binout.32 ]
-    area: Salon
-  - id: light9
-    name: MLED Salon 09
-    states: [ aout.9, binout.33 ]
-    area: Salon
-  - id: light10
-    name: MLED Salon 10
-    states: [ aout.10, binout.34 ]
-    area: Salon
-  - id: light11
-    name: MLED Salon 11
-    states: [ aout.11, binout.35 ]
-    area: Salon
-  - id: light12
-    name: MLED Salon 12
-    states: [ aout.12, binout.36 ]
-    area: Salon
-  - id: light13
-    name: MLED Przedpokój 01
-    states: [ aout.13, binout.37 ]
-    area: Przedpokój
-  - id: light14
-    name: MLED Przedpokój 02
-    states: [ aout.14, binout.38 ]
-    area: Przedpokój
-  - id: light15
-    name: MLED Przedpokój 03
-    states: [ aout.15, binout.39 ]
-    area: Przedpokój
-  - id: light16
-    name: MLED Przedpokój 04
-    states: [ aout.16, binout.40 ]
-    area: Przedpokój
-
-- can_id: 0x1ecc
-  name: Satel
-  model: 25
-  pcb: 6
-  sw_version: 3001
-  area: Serwerownia
-  texts:
-  - id: text1
-    name: Status ostatniej komendy
-    states: [ response.1 ]
-  alarm_control_panels:
-  - id: zone1
+  - id: parter1
     name: Parter
-    states: [ armed.1, arming.1, arming_10s.1, breached.1, alarm.1 ]
-  - id: zone2
+    level: 0
+    areas:
+      - id: garaz1
+        name: Garaż
+        icon: mdi:car
+      - id: gabinet1
+        name: Gabinet
+        icon: mdi:desk
+      - id: salon1
+        name: Salon
+        icon: mdi:sofa
+      - id: serwerownia1
+        name: Serwerownia
+        icon: mdi:server
+      - id: kuchnia1
+        name: Kuchnia
+        icon: mdi:fridge
+      - id: kotlownia1
+        name: Kotłownia
+        icon: mdi:heating-coil
+      - id: hall1
+        name: Przedpokój
+        icon: mdi:walk
+      - id: toaleta1
+        name: Toaleta
+        icon: mdi:toilet
+  - id: pietro1
     name: Piętro
-    states: [ armed.2, arming.2, arming_10s.2, breached.2, alarm.2 ]
-  - id: zone3
-    name: Zewnętrzna
-    states: [ armed.3, arming.3, arming_10s.3, breached.3, alarm.3 ]
-  binary_sensors:
-  - id: motion1
-    name: Wiatrołap
-    states: bin.1
-    device_class: motion
-    area: Przedpokój
-  - id: motion2
-    name: Garaż ogród
-    states: bin.2
-    device_class: motion
-    area: Garaż
-  - id: motion3
-    name: Garaż
-    states: bin.3
-    device_class: motion
-    area: Garaż
-  - id: motion4
-    name: Garderoba
-    states: bin.4
-    device_class: motion
-    area: Przedpokój
-  - id: motion5
-    name: Hall
-    states: bin.5
-    device_class: motion
-    area: Przedpokój
-  - id: motion6
-    name: Salon
-    states: bin.6
-    device_class: motion
-    area: Salon
-  - id: motion7
-    name: Kuchnia
-    states: bin.7
-    device_class: motion
-    area: Kuchnia
-  - id: motion8
-    name: Spiżarnia
-    states: bin.8
-    device_class: motion
-    area: Kuchnia
-  - id: motion9
-    name: Gabinet
-    states: bin.9
-    device_class: motion
-    area: Gabinet
-  - id: motion10
-    name: Ruch w serwerowni
-    states: bin.10
-    device_class: motion
-    area: Serwerownia
-  - id: motion11
+    level: 1
+    areas:
+      - id: silownia1
+        name: Siłownia
+        icon: mdi:gymnastics
+      - id: emilia1
+        name: Pokój Emilii
+        icon: mdi:account
+      - id: goscinny1
+        name: Pokój gościnny
+        icon: mdi:room-service
+      - id: sypialnia1
+        name: Sypialnia
+        icon: mdi:bed-king
+      - id: lazienka1
+        name: Mała łazienka
+        icon: mdi:shower-head
+      - id: lazienka2
+        name: Duża łazienka
+        icon: mdi:bathtub
+      - id: pralnia1
+        name: Pralnia
+        icon: mdi:washing-machine
+      - id: korytarz1
+        name: Korytarz
+        icon: mdi:walk
+areas:
+  - id: ogrod1
+    name: Ogród
+    icon: mdi:flower
+devices:
+  - can_id: 9927
     name: Toaleta
-    states: bin.11
-    device_class: motion
+    model: 44
+    pcb: 2
+    sw_version: 10400
     area: Toaleta
-  - id: motion12
-    name: Korytarz
-    states: bin.12
-    device_class: motion
-    area: Korytarz
-  - id: motion13
-    name: Siłownia
-    states: bin.13
-    device_class: motion
-    area: Siłownia
-  - id: motion14
-    name: Garderoba siłownia
-    states: bin.14
-    device_class: motion
-    area: Siłownia
-  - id: motion15
-    name: Pokój Emilii
-    states: bin.15
-    device_class: motion
-    area: Pokój Emilii
-  - id: motion16
-    name: Garderoba Emilii
-    states: bin.16
-    device_class: motion
-    area: Pokój Emilii
-
-  - id: door17
-    name: Główna łazienka
-    states: bin.17
-    device_class: door
-    area: Duża łazienka
-  - id: motion18
-    name: Pralnia
-    states: bin.18
-    device_class: motion
-    area: Pralnia
-  - id: motion19
-    name: Pokój gościnny
-    states: bin.19
-    device_class: motion
-    area: Pokój gościnny
-  - id: motion20
-    name: Sypialnia Hall
-    states: bin.20
-    device_class: motion
-    area: Sypialnia
-  - id: motion21
-    name: Sypialnia
-    states: bin.21
-    device_class: motion
-    area: Sypialnia
-  - id: motion22
-    name: Sypialania garderoba
-    states: bin.22
-    device_class: motion
-    area: Sypialnia
-  - id: motion23
-    name: Ruch
-    states: bin.23
-    device_class: motion
-    area: Duża łazienka
-
-  - id: door24
-    name: Drzwi wejściowe
-    states: bin.24
-    device_class: door
+    sensors:
+      - id: temperature1
+        name: Temperatura
+        states: temperature.1
+        device_class: temperature
+      - id: humidity1
+        name: Wilgotność
+        states: s16b.1
+        device_class: humidity
+      - id: rap1
+        name: Ciśnienie względne
+        states: s16b.3
+        device_class: atmospheric_pressure
+  - can_id: 9938
+    name: Garderoba Parter
+    model: 44
+    pcb: 2
+    sw_version: 10400
     area: Przedpokój
-  - id: lock25
-    name: Zamek
-    states: bin.25
-    device_class: lock
-    area: Przedpokój
-  - id: door26
-    name: Drzwi ogrodowe
-    states: bin.26
-    device_class: door
-    area: Garaż
-  - id: lock27
-    name: Zamek ogrodowy
-    states: bin.27
-    device_class: lock
-    area: Garaż
-  - id: contact28
-    name: Brama garażowa góra
-    states: bin.28
-    # device_class: contact
-    area: Garaż
-  - id: contact29
-    name: Brama garażowa dół
-    states: bin.29
-    # device_class: garage_door
-    area: Garaż
-  - id: door30
-    name: Garderoba
-    states: bin.30
-    device_class: door
-    area: Garaż
-  - id: door31
-    name: Garderoba
-    states: bin.31
-    device_class: door
-    area: Przedpokój
-  - id: door32
-    name: Kotłownia
-    states: bin.32
-    device_class: door
-    area: Kotłownia
-  - id: door33
-    name: Szklane drzwi
-    states: bin.33
-    device_class: door
-    area: Przedpokój
-  - id: door34
-    name: Toaleta
-    states: bin.34
-    device_class: door
-    area: Toaleta
-  - id: door35
-    name: Gabinet
-    states: bin.35
-    device_class: door
-    area: Gabinet
-  - id: door36
+    sensors:
+      - id: temperature1
+        name: Temperatura
+        states: temperature.1
+        device_class: temperature
+      - id: humidity1
+        name: Wilgotność
+        states: s16b.1
+        device_class: humidity
+      - id: rap1
+        name: Ciśnienie względne
+        states: s16b.3
+        device_class: atmospheric_pressure
+  - can_id: 8516
     name: Serwerownia
-    states: bin.36
-    device_class: door
+    model: 44
+    pcb: 1
+    sw_version: 10400
     area: Serwerownia
-  - id: door37
-    name: Drzwi tarasowe
-    states: bin.37
-    device_class: door
-    area: Salon
-  - id: lock38
-    name: Zamek tarasowy
-    states: bin.38
-    device_class: lock
-    area: Salon
-  - id: door39
-    name: Spiżarnia
-    states: bin.39
-    device_class: door
-    area: Kuchnia
-  - id: window40
-    name: Okno kuchenne
-    states: bin.40
-    device_class: window
-    area: Kuchnia
-  - id: window41
-    name: Okno kuchenne uchył
-    states: bin.41
-    device_class: window
-    area: Kuchnia
-  - id: door42
-    name: Siłownia
-    states: bin.42
-    device_class: door
-    area: Siłownia
-  - id: door43
-    name: Garderoba
-    states: bin.43
-    device_class: door
-    area: Siłownia
-  - id: window44
-    name: Siłownia okno
-    states: bin.44
-    device_class: window
-    area: Siłownia
-  - id: window45
-    name: Siłownia okno uchył
-    states: bin.45
-    device_class: window
-    area: Siłownia
-  - id: door46
+    sensors:
+      - id: temperature1
+        name: Temperatura
+        states: temperature.1
+        device_class: temperature
+      - id: humidity1
+        name: Wilgotność
+        states: s16b.1
+        device_class: humidity
+      - id: rap1
+        name: Ciśnienie względne
+        states: s16b.3
+        device_class: atmospheric_pressure
+  - can_id: 28475
+    name: Gabinet
+    model: 44
+    pcb: 3
+    sw_version: 63
+    area: Gabinet
+    sensors:
+      - id: temperature1
+        name: Temperatura
+        device_class: temperature
+        states: temperature.1
+      - id: humidity1
+        name: Wilgotność
+        states: s16b10000.1
+        device_class: humidity
+      - id: aap1
+        name: Ciśnienie bezwzględne
+        states: s16b10000.2
+        device_class: atmospheric_pressure
+      - id: noise1
+        name: Hałas
+        states: s16b10000.3
+        device_class: sound_pressure
+      - id: brightness1
+        name: Jasność
+        states: s16b10000.4
+        device_class: illuminance
+      - id: aqi1
+        name: Jakość powietrza
+        states: s16b10000.5
+        device_class: aqi
+      - id: rap1
+        name: Ciśnienie względne
+        states: s16b10000.6
+        device_class: atmospheric_pressure
+  - can_id: 28481
+    name: Garaż
+    model: 44
+    pcb: 3
+    sw_version: 63
+    area: Garaż
+    sensors:
+      - id: temperature1
+        name: Temperatura
+        device_class: temperature
+        states: temperature.1
+      - id: humidity1
+        name: Wilgotność
+        states: s16b10000.1
+        device_class: humidity
+      - id: aap1
+        name: Ciśnienie bezwzględne
+        states: s16b10000.2
+        device_class: atmospheric_pressure
+      - id: noise1
+        name: Hałas
+        states: s16b10000.3
+        device_class: sound_pressure
+      - id: brightness1
+        name: Jasność
+        states: s16b10000.4
+        device_class: illuminance
+      - id: aqi1
+        name: Jakość powietrza
+        states: s16b10000.5
+        device_class: aqi
+      - id: rap1
+        name: Ciśnienie względne
+        states: s16b10000.6
+        device_class: atmospheric_pressure
+  - can_id: 28485
+    name: Przedpokój
+    model: 44
+    pcb: 3
+    sw_version: 63
+    area: Przedpokój
+    sensors:
+      - id: temperature1
+        name: Temperatura
+        device_class: temperature
+        states: temperature.1
+      - id: humidity1
+        name: Wilgotność
+        states: s16b10000.1
+        device_class: humidity
+      - id: aap1
+        name: Ciśnienie bezwzględne
+        states: s16b10000.2
+        device_class: atmospheric_pressure
+      - id: noise1
+        name: Hałas
+        states: s16b10000.3
+        device_class: sound_pressure
+      - id: brightness1
+        name: Jasność
+        states: s16b10000.4
+        device_class: illuminance
+      - id: aqi1
+        name: Jakość powietrza
+        states: s16b10000.5
+        device_class: aqi
+      - id: rap1
+        name: Ciśnienie względne
+        states: s16b10000.6
+        device_class: atmospheric_pressure
+  - can_id: 28489
     name: Pokój Emilii
-    states: bin.46
-    device_class: door
+    model: 44
+    pcb: 3
+    sw_version: 63
     area: Pokój Emilii
-  - id: door47
-    name: Garderoba Emilii
-    states: bin.47
-    device_class: door
-    area: Pokój Emilii
-  - id: window48
-    name: Okno Emilii
-    states: bin.48
-    device_class: window
-    area: Pokój Emilii
-  - id: window49
-    name: Okno Emilii uchył
-    states: bin.49
-    device_class: window
-    area: Pokój Emilii
-  - id: motion50
-    name: Mała łazienka
-    states: bin.50
-    device_class: motion
-    area: Mała łazienka
-  - id: door51
-    name: Pralnia
-    states: bin.51
-    device_class: door
-    area: Pralnia
-  - id: window52
-    name: Okno pralni
-    states: bin.52
-    device_class: window
-    area: Pralnia
-  - id: window53
-    name: Okno pralni uchył
-    states: bin.53
-    device_class: window
-    area: Pralnia
-  - id: door54
-    name: Pokój gościnny
-    states: bin.54
-    device_class: door
-    area: Pokój gościnny
-  - id: window55
-    name: Okno w gościnnym
-    states: bin.55
-    device_class: window
-    area: Pokój gościnny
-  - id: window56
-    name: Okno w gościnnym uchył
-    states: bin.56
-    device_class: window
-    area: Pokój gościnny
-  - id: door57
-    name: Drzwi do sypialni
-    states: bin.57
-    device_class: door
-    area: Sypialnia
-  - id: door58
-    name: Drzwi dużej łazienki
-    states: bin.58
-    device_class: door
-    area: Duża łazienka
-  - id: moption59
-    name: Podjazd wschód
-    states: bin.59
-    device_class: motion
-    area: Ogród
-  - id: window60
-    name: Okno w sypialni uchył
-    states: bin.60
-    device_class: window
-    area: Sypialnia
-  - id: door61
-    name: Drzwi do garderoby
-    states: bin.61
-    device_class: door
-    area: Sypialnia
-  - id: window62
-    name: Okno w garderobie
-    states: bin.62
-    device_class: window
-    area: Sypialnia
-  - id: window63
-    name: Okno w garderobie uchył
-    states: bin.63
-    device_class: window
-    area: Sypialnia
-  - id: window64
-    name: Okno w dużej łazience
-    states: bin.64
-    device_class: window
-    area: Duża łazienka
-  - id: window65
-    name: Okno w dużej łazience uchył
-    states: bin.65
-    device_class: window
-    area: Duża łazienka
-  - id: moisture66
-    name: Wyciek w kotłowni
-    states: bin.66
-    device_class: moisture
+    sensors:
+      - id: temperature1
+        name: Temperatura
+        device_class: temperature
+        states: temperature.1
+      - id: humidity1
+        name: Wilgotność
+        states: s16b10000.1
+        device_class: humidity
+      - id: aap1
+        name: Ciśnienie bezwzględne
+        states: s16b10000.2
+        device_class: atmospheric_pressure
+      - id: noise1
+        name: Hałas
+        states: s16b10000.3
+        device_class: sound_pressure
+      - id: brightness1
+        name: Jasność
+        states: s16b10000.4
+        device_class: illuminance
+      - id: aqi1
+        name: Jakość powietrza
+        states: s16b10000.5
+        device_class: aqi
+      - id: rap1
+        name: Ciśnienie względne
+        states: s16b10000.6
+        device_class: atmospheric_pressure
+  - can_id: 28490
+    name: Kotłownia
+    model: 44
+    pcb: 3
+    sw_version: 63
     area: Kotłownia
-  - id: moisture67
-    name: Wyciek w toalecie
-    states: bin.67
-    device_class: moisture
-    area: Toaleta
-  - id: moisture68
-    name: Wyciek pod zlewem
-    states: bin.68
-    device_class: moisture
-    area: Kuchnia
-  - id: moisture69
-    name: Wyciek pod lodówką
-    states: bin.69
-    device_class: moisture
-    area: Kuchnia
-  - id: moisture70
-    name: Wyciek w pralni
-    states: bin.70
-    device_class: moisture
-    area: Pralnia
-  - id: moisture71
-    name: Wyciek w małej łazience
-    states: bin.71
-    device_class: moisture
-    area: Mała łazienka
-  - id: moisture72
-    name: Wyciek w dużej łazience
-    states: bin.72
-    device_class: moisture
-    area: Duża łazienka
-  - id: gas74
-    name: Chloroform
-    states: bin.73
-    device_class: gas
-    area: Serwerownia
-  - id: gas75
-    name: Gaz ziemny
-    states: bin.74
-    device_class: gas
-    area: Kotłownia
-  - id: motion76
-    name: Ruch przed wejściem
-    states: bin.76
-    device_class: motion
-    area: Ogród
-  - id: motion77
-    name: Ruch przed garażem
-    states: bin.77
-    device_class: motion
-    area: Ogród
-  - id: motion78
-    name: Ruch ogródek południe
-    states: bin.78
-    device_class: motion
-    area: Ogród
-  - id: motion79
-    name: Ruch ogród zachód
-    states: bin.79
-    device_class: motion
-    area: Ogród
-  - id: motion80
-    name: Ruch taras zachód
-    states: bin.80
-    device_class: motion
-    area: Ogród
-  - id: motion81
-    name: Ruch północ
-    states: bin.81
-    device_class: motion
-    area: Ogród
-  - id: motion82
-    name: Ruch ogródek wschód
-    states: bin.82
-    device_class: motion
-    area: Ogród
-  - id: motion83
-    name: Ruch południe dach
-    states: bin.83
-    device_class: motion
-    area: Ogród
-  - id: motion84
-    name: Ruch schody dół
-    states: bin.84
-    device_class: motion
-    area: Salon
-  - id: gas85
-    name: Tlenek węgla
-    states: bin.85
-    device_class: carbon_monoxide
-    area: Kotłownia
-  - id: motion86
-    name: Korytarz2
-    states: bin.86
-    device_class: motion
+    sensors:
+      - id: temperature1
+        name: Temperatura
+        device_class: temperature
+        states: temperature.1
+      - id: humidity1
+        name: Wilgotność
+        states: s16b10000.1
+        device_class: humidity
+      - id: aap1
+        name: Ciśnienie bezwzględne
+        states: s16b10000.2
+        device_class: atmospheric_pressure
+      - id: noise1
+        name: Hałas
+        states: s16b10000.3
+        device_class: sound_pressure
+      - id: brightness1
+        name: Jasność
+        states: s16b10000.4
+        device_class: illuminance
+      - id: aqi1
+        name: Jakość powietrza
+        states: s16b10000.5
+        device_class: aqi
+      - id: rap1
+        name: Ciśnienie względne
+        states: s16b10000.6
+        device_class: atmospheric_pressure
+  - can_id: 28493
+    name: Korytarz
+    model: 44
+    pcb: 3
+    sw_version: 63
     area: Korytarz
-  - id: motion87
-    name: Ruch schody góra
-    states: bin.87
-    device_class: motion
-    area: Korytarz
-  - id: contact88
-    name: Blokada nocna
-    states: bin.88
-    area: Serwerownia
-
-  - id: contact110
-    name: Wyłączenie str 2
-    states: bin.110
-    area: Serwerownia
-  - id: contact111
-    name: Wyłączenie str 1
-    states: bin.111
-    area: Serwerownia
-  - id: contact112
-    name: Wyłączenie str 3
-    states: bin.112
-    area: Serwerownia
-  - id: contact113
-    name: Włączenie str 1
-    states: bin.113
-    area: Serwerownia
-  - id: contact114
-    name: Włączenie str 3
-    states: bin.114
-    area: Serwerownia
-  - id: contact115
-    name: Włączenie str 2
-    states: bin.115
-    area: Serwerownia
-
-- can_id: 0x1
-  name: Ampio serwer
-  model: 10
-  pcb: 6
-  sw_version: 11605
-  area: Serwerownia
-  switches:
-  # - id: switch1
-  #   name: Podlewanie strefa 1
-  #   states: [ binout.25 ]
-  #   area: Ogród
-  # - id: switch2
-  #   name: Podlewanie strefa 2
-  #   states: [ binout.26 ]
-  #   area: Ogród
-  # Moved to sensor
-  # - id: switch3
-  #   name: Podlewanie basen
-  #   states: [ binout.27 ]
-  #   area: Ogród
-  # - id: switch4
-  #   name: Podlewanie strefa 4
-  #   area: Ogród
-  #   states: [ binout.28 ]
-  # - id: switch5
-  #   name: Podlewanie strefa 5
-  #   area: Ogród
-  #   states: [ binout.29 ]
-  # - id: switch6
-  #   name: Linia kroplująca
-  #   area: Ogród
-  #   states: [ binout.30 ]
-  - id: switch7
-    name: Pompa studnia
-    states: [ binout.31 ]
-    area: Ogród
-  - id: switch8
-    name: Nie wiadomo
-    area: Ogród
-    states: [ binout.32 ]
-  - id: flag1
-    name: Blokada podlewania
-    states: [ flag.1 ]
-    area: Ogród
-  - id: flag6
-    name: Podlewanie front
-    states: [ flag.6 ]
-    area: Ogród
-  - id: flag7
-    name: Podlewanie bok
-    states: [ flag.7 ]
-    area: Ogród
-  - id: flag8
-    name: Podlewanie basen
-    states: [ flag.8 ]
-    area: Ogród
-  - id: flag9
-    name: Podlewanie taras
-    states: [ flag.9 ]
-    area: Ogród
-  - id: flag10
-    name: Podlewanie rabaty
-    states: [ flag.10 ]
-    area: Ogród
-  - id: flag11
-    name: Podlewanie warzywnik
-    states: [ flag.11 ]
-    area: Ogród
-
-  binary_sensors:
-  - id: switch1
-    name: Podlewanie front
-    states: [ binout.25 ]
-    area: Ogród
-  - id: switch2
-    name: Podlewanie bok
-    states: [ binout.26 ]
-    area: Ogród
-  - id: switch3
-    name: Podlewanie basen
-    states: [ binout.27 ]
-    area: Ogród
-  - id: switch4
-    name: Podlewanie taras
-    area: Ogród
-    states: [ binout.28 ]
-  - id: switch5
-    name: Podlewanie strefa 5
-    area: Ogród
-    states: [ binout.29 ]
-  - id: switch6
-    name: Linia kroplująca
-    area: Ogród
-    states: [ binout.30 ]
-
-  - id: flag2
-    name: Zawór zbiornik
-    states: [ flag.2 ]
-    area: Ogród
-  - id: flag3
-    name: Zawór woda miejska
-    states: [ flag.3 ]
-    area: Ogród
-  - id: flag4
-    name: Praca zaworu
-    states: [ flag.4 ]
-    area: Ogród
-  - id: flag5
-    name: Pompa studnia
-    states: [ flag.5 ]
-    area: Ogród
-  - id: flag12
-    name: Podlewanie
-    states: [ flag.12 ]
-    area: Ogród
-  - id: flag13
-    name: Silny wiatr
-    states: [ flag.13 ]
-    area: Ogród
-
-- can_id: 0x2
-  name: Ampio serwer 2
-  model: 10
-  pcb: 6
-  sw_version: 11605
-  area: Gabinet
-  switches:
-  - id: switch1
-    name: Ampio switch 1
-    states: [ binout.25 ]
-  - id: switch2
-    name: Ampio switch 2
-    states: [ binout.26 ]
-  - id: flag1
-    name: Ampio flag 1
-    states: [ flag.1 ]
-
-- can_id: 0x196a
-  name: Żaluzje 1
-  model: 3
-  pcb: 2
-  sw_version: 10400
-  area: Serwerownia
-  binary_sensors:
-  - id: input1
-    name: Duża łazienka LL
-    states: [ binout.1 ]
-    area: Sypialnia
-  - id: input2
-    name: Duża łazienka LP
-    states: [ binout.2 ]
-    area: Sypialnia
-  - id: input3
-    name: Duża łazienka PL
-    states: [ binout.3 ]
-    area: Garaż
-  - id: input4
-    name: Duża łazienka PL
-    states: [ binout.4 ]
-    area: Garaż
-  covers:
-  - id: cover1
-    name: S Salon
-    states: [ aout.1, aout.7, binout.25, binout.26 ]
-    area: Salon
-  - id: cover2
-    name: W Taras
-    states: [ aout.2, aout.8, binout.27, binout.28 ]
-    area: Salon
-  - id: cover3
-    name: N Kuchnia
-    states: [ aout.3, aout.9, binout.29, binout.30 ]
-    area: Kuchnia
-  - id: cover4
-    name: E Kuchnia
-    states: [ aout.4, aout.10, binout.31, binout.32 ]
-    area: Kuchnia
-
-- can_id: 0x1968
-  name: Żaluzje 2
-  model: 3
-  pcb: 2
-  sw_version: 10400
-  area: Serwerownia
-  binary_sensors:
-  - id: input1
-    name: Garderoba L
-    states: [ binout.1 ]
-    area: Sypialnia
-  - id: input2
-    name: Garderoba P
-    states: [ binout.2 ]
-    area: Sypialnia
-  - id: input3
-    name: Garaż L
-    states: [ binout.3 ]
-    area: Garaż
-  - id: input4
-    name: Garaż P
-    states: [ binout.4 ]
-    area: Garaż
-  covers:
-  - id: cover1
-    name: W Bonsai
-    states: [ aout.1, aout.7, binout.25, binout.26 ]
-    area: Salon
-  - id: cover2
-    name: N Gabinet
-    states: [ aout.2, aout.8, binout.27, binout.28 ]
-    area: Gabinet
-  - id: cover3
-    name: W Gabinet
-    states: [ aout.3, aout.9, binout.29, binout.30 ]
-    area: Gabinet
-  - id: cover4
-    name: W Sypialnia
-    states: [ aout.4, aout.10, binout.31, binout.32 ]
-    area: Sypialnia
-
-- can_id: 0x1965
-  name: Żaluzje 1
-  model: 3
-  pcb: 2
-  sw_version: 10400
-  area: Serwerownia
-  binary_sensors:
-  - id: input1
-    name: MIN (10)-poziom max
-    states: [ binout.1 ]
-    area: Ogród
-  - id: input2
-    name: MIN (12)-poziom min
-    states: [ binout.2 ]
-    area: Ogród
-  - id: input3
-    name: MAX (7)-poziom max
-    states: [ binout.3 ]
-    area: Ogrod
-  - id: input4
-    name: MAX (9)-poziom min
-    states: [ binout.4 ]
-    area: Ogród
-  covers:
-  - id: cover1
-    name: N Garderoba
-    states: [ aout.1, aout.7, binout.25, binout.26 ]
-    area: Sypialnia
-  - id: cover2
-    name: N Duża łazienka
-    states: [ aout.2, aout.8, binout.27, binout.28 ]
-    area: Duża łazienka
-  - id: cover3
-    name: E Siłownia
-    states: [ aout.3, aout.9, binout.29, binout.30 ]
+    sensors:
+      - id: temperature1
+        name: Temperatura
+        device_class: temperature
+        states: temperature.1
+      - id: humidity1
+        name: Wilgotność
+        states: s16b10000.1
+        device_class: humidity
+      - id: aap1
+        name: Ciśnienie bezwzględne
+        states: s16b10000.2
+        device_class: atmospheric_pressure
+      - id: noise1
+        name: Hałas
+        states: s16b10000.3
+        device_class: sound_pressure
+      - id: brightness1
+        name: Jasność
+        states: s16b10000.4
+        device_class: illuminance
+      - id: aqi1
+        name: Jakość powietrza
+        states: s16b10000.5
+        device_class: aqi
+      - id: rap1
+        name: Ciśnienie względne
+        states: s16b10000.6
+        device_class: atmospheric_pressure
+  - can_id: 28495
+    name: Siłownia
+    model: 44
+    pcb: 3
+    sw_version: 1
     area: Siłownia
-  - id: cover4
-    name: S Emilia
-    states: [ aout.4, aout.10, binout.31, binout.32 ]
-    area: Pokój Emilii
-
-- can_id: 0x1b2a
-  name: Żaluzje 4
-  model: 3
-  pcb: 3
-  sw_version: 10400
-  area: Serwerownia
-  binary_sensors:
-  - id: input5
-    name: Garaż brama L
-    states: [ binout.5 ]
-    area: Garaż
-  - id: input6
-    name: Garaż brama P
-    states: [ binout.6 ]
-    area: Garaż
-  valves:
-  - id: valve3
-    name: Woda ze zbiornika
-    states: [ aout.3 ]
-    area: Ogród
-  covers:
-  - id: cover1
-    name: S Pralnia
-    states: [ aout.1, aout.7, binout.25, binout.26 ]
-    area: Pralnia
-  - id: cover2
-    name: S Gościnny
-    states: [ aout.2, aout.8, binout.27, binout.28 ]
+    sensors:
+      - id: temperature1
+        name: Temperatura
+        device_class: temperature
+        states: temperature.1
+      - id: humidity1
+        name: Wilgotność
+        states: s16b10000.1
+        device_class: humidity
+      - id: aap1
+        name: Ciśnienie bezwzględne
+        states: s16b10000.2
+        device_class: atmospheric_pressure
+      - id: noise1
+        name: Hałas
+        states: s16b10000.3
+        device_class: sound_pressure
+      - id: brightness1
+        name: Jasność
+        states: s16b10000.4
+        device_class: illuminance
+      - id: aqi1
+        name: Jakość powietrza
+        states: s16b10000.5
+        device_class: aqi
+      - id: rap1
+        name: Ciśnienie względne
+        states: s16b10000.6
+        device_class: atmospheric_pressure
+  - can_id: 28501
+    name: Mała łazienka
+    model: 44
+    pcb: 3
+    sw_version: 1
+    area: Mała łazienka
+    sensors:
+      - id: temperature1
+        name: Temperatura
+        device_class: temperature
+        states: temperature.1
+      - id: humidity1
+        name: Wilgotność
+        states: s16b10000.1
+        device_class: humidity
+      - id: aap1
+        name: Ciśnienie bezwzględne
+        states: s16b10000.2
+        device_class: atmospheric_pressure
+      - id: noise1
+        name: Hałas
+        states: s16b10000.3
+        device_class: sound_pressure
+      - id: brightness1
+        name: Jasność
+        states: s16b10000.4
+        device_class: illuminance
+      - id: aqi1
+        name: Jakość powietrza
+        states: s16b10000.5
+        device_class: aqi
+      - id: rap1
+        name: Ciśnienie względne
+        states: s16b10000.6
+        device_class: atmospheric_pressure
+  - can_id: 28502
+    name: Pokój gościnny
+    model: 44
+    pcb: 3
+    sw_version: 1
     area: Pokój gościnny
-  - id: cover4
-    name: Brama garażowa
-    states: [ aout.4, aout.10 ]
-    area: Garaż
-    device_class: garage
+    sensors:
+      - id: temperature1
+        name: Temperatura
+        device_class: temperature
+        states: temperature.1
+      - id: humidity1
+        name: Wilgotność
+        states: s16b10000.1
+        device_class: humidity
+      - id: aap1
+        name: Ciśnienie bezwzględne
+        states: s16b10000.2
+        device_class: atmospheric_pressure
+      - id: noise1
+        name: Hałas
+        states: s16b10000.3
+        device_class: sound_pressure
+      - id: brightness1
+        name: Jasność
+        states: s16b10000.4
+        device_class: illuminance
+      - id: aqi1
+        name: Jakość powietrza
+        states: s16b10000.5
+        device_class: aqi
+      - id: rap1
+        name: Ciśnienie względne
+        states: s16b10000.6
+        device_class: atmospheric_pressure
+  - can_id: 28540
+    name: Pralnia
+    model: 44
+    pcb: 3
+    sw_version: 1
+    area: Pralnia
+    sensors:
+      - id: temperature1
+        name: Temperatura
+        device_class: temperature
+        states: temperature.1
+      - id: humidity1
+        name: Wilgotność
+        states: s16b10000.1
+        device_class: humidity
+      - id: aap1
+        name: Ciśnienie bezwzględne
+        states: s16b10000.2
+        device_class: atmospheric_pressure
+      - id: noise1
+        name: Hałas
+        states: s16b10000.3
+        device_class: sound_pressure
+      - id: brightness1
+        name: Jasność
+        states: s16b10000.4
+        device_class: illuminance
+      - id: aqi1
+        name: Jakość powietrza
+        states: s16b10000.5
+        device_class: aqi
+      - id: rap1
+        name: Ciśnienie względne
+        states: s16b10000.6
+        device_class: atmospheric_pressure
+  - can_id: 28959
+    name: Duża łazienka
+    model: 44
+    pcb: 3
+    sw_version: 1
+    area: Duża łazienka
+    sensors:
+      - id: temperature1
+        name: Temperatura
+        device_class: temperature
+        states: temperature.1
+      - id: humidity1
+        name: Wilgotność
+        states: s16b10000.1
+        device_class: humidity
+      - id: aap1
+        name: Ciśnienie bezwzględne
+        states: s16b10000.2
+        device_class: atmospheric_pressure
+      - id: noise1
+        name: Hałas
+        states: s16b10000.3
+        device_class: sound_pressure
+      - id: brightness1
+        name: Jasność
+        states: s16b10000.4
+        device_class: illuminance
+      - id: aqi1
+        name: Jakość powietrza
+        states: s16b10000.5
+        device_class: aqi
+      - id: rap1
+        name: Ciśnienie względne
+        states: s16b10000.6
+        device_class: atmospheric_pressure
+  - can_id: 28511
+    name: Salon
+    model: 44
+    pcb: 3
+    sw_version: 1
+    area: Salon
+    sensors:
+      - id: temperature1
+        name: Temperatura
+        device_class: temperature
+        states: temperature.1
+      - id: humidity1
+        name: Wilgotność
+        states: s16b10000.1
+        device_class: humidity
+      - id: aap1
+        name: Ciśnienie bezwzględne
+        states: s16b10000.2
+        device_class: atmospheric_pressure
+      - id: noise1
+        name: Hałas
+        states: s16b10000.3
+        device_class: sound_pressure
+      - id: brightness1
+        name: Jasność
+        states: s16b10000.4
+        device_class: illuminance
+      - id: aqi1
+        name: Jakość powietrza
+        states: s16b10000.5
+        device_class: aqi
+      - id: rap1
+        name: Ciśnienie względne
+        states: s16b10000.6
+        device_class: atmospheric_pressure
+  - can_id: 6599
+    name: Ściemniacz 1
+    model: 5
+    pcb: 2
+    sw_version: 10013
+    area: Serwerownia
+    lights:
+      - id: light1
+        name: Pokój Emilii
+        states:
+          - aout.1
+          - binout.25
+        area: Pokój Emilii
+      - id: light2
+        name: Światło w siłowni
+        states:
+          - aout.2
+          - binout.26
+        area: Siłownia
+      - id: light3
+        name: Korytarz
+        states:
+          - aout.3
+          - binout.27
+        area: Korytarz
+      - id: light4
+        name: Garderoba siłownia
+        states:
+          - aout.4
+          - binout.28
+        area: Siłownia
+      - id: light5
+        name: Garderoba w sypialni
+        states:
+          - aout.5
+          - binout.29
+        area: Sypialnia
+      - id: light6
+        name: Wiatrak w sypialni
+        states:
+          - aout.6
+          - binout.30
+        area: Sypialnia
+      - id: light7
+        name: Taras
+        states:
+          - aout.7
+          - binout.31
+        area: Ogród
+      - id: light8
+        name: Stół jadalny
+        states:
+          - aout.8
+          - binout.32
+        area: Kuchnia
+  - can_id: 5100
+    name: Ściemniacz 2
+    model: 5
+    pcb: 2
+    sw_version: 10013
+    area: Serwerownia
+    lights:
+      - id: light1
+        name: Kinkiet Korytarz
+        states:
+          - aout.1
+          - binout.25
+        area: Korytarz
+      - id: light2
+        name: Światło w spiżarni
+        states:
+          - aout.2
+          - binout.26
+        area: Kuchnia
+      - id: light3
+        name: Garderoba
+        states:
+          - aout.3
+          - binout.27
+        area: Przedpokój
+      - id: light4
+        name: Kanapa
+        states:
+          - aout.4
+          - binout.28
+        area: Salon
+      - id: light5
+        name: Gabinet
+        states:
+          - aout.5
+          - binout.29
+        area: Gabinet
+      - id: light6
+        name: Schody
+        states:
+          - aout.6
+          - binout.30
+        area: Korytarz
+      - id: light7
+        name: Emilia Garderoba
+        states:
+          - aout.7
+          - binout.31
+        area: Pokój Emilii
+      - id: light8
+        name: Pokój gościnny
+        states:
+          - aout.8
+          - binout.32
+        area: Pokój gościnny
+  - can_id: 6265
+    name: Salon
+    model: 12
+    pcb: 6
+    sw_version: 10010
+    area: Serwerownia
+    lights:
+      - id: light1
+        name: LED Salon
+        states:
+          - rgb.1
+          - binout.25
+          - binout.26
+          - binout.27
+          - binout.28
+        area: Salon
+  - can_id: 6322
+    name: Wanna
+    model: 12
+    pcb: 6
+    sw_version: 10010
+    area: Duża łazienka
+    lights:
+      - id: light1
+        name: LED Wanna
+        states:
+          - rgb.1
+          - binout.25
+          - binout.26
+          - binout.27
+          - binout.28
+        area: Duża łazienka
+  - can_id: 6835
+    name: Schody
+    model: 12
+    pcb: 6
+    sw_version: 10010
+    area: Korytarz
+    lights:
+      - id: light1
+        name: LED Schody
+        states:
+          - rgb.1
+          - binout.25
+          - binout.26
+          - binout.27
+          - binout.28
+        area: Korytarz
+  - can_id: 6277
+    name: LED
+    model: 26
+    pcb: 2
+    sw_version: 10119
+    area: Serwerownia
+    lights:
+      - id: light1
+        name: Lustro
+        states:
+          - aout.1
+          - binout.25
+        area: Duża łazienka
+      - id: light2
+        name: Lustro
+        states:
+          - aout.2
+          - binout.26
+        area: Mała łazienka
+      - id: light3
+        name: Lustro
+        states:
+          - aout.3
+          - binout.27
+        area: Toaleta
+  - can_id: 7048
+    name: Zegar Ogrzewanie
+    model: 22
+    pcb: 3
+    sw_version: 10559
+    area: Serwerownia
+    climates:
+      - id: climate1
+        name: Ogrzewanie korytarz
+        states:
+          - heating.1
+          - zone.1
+        area: Korytarz
+      - id: climate2
+        name: Ogrzewanie garaż
+        states:
+          - heating.2
+          - zone.2
+        area: Garaż
+      - id: climate3
+        name: Ogrzewanie salon
+        states:
+          - heating.3
+          - zone.3
+        area: Salon
+      - id: climate4
+        name: Ogrzewanie gabinet
+        states:
+          - heating.4
+          - zone.4
+        area: Gabinet
+      - id: climate5
+        name: Ogrzewanie toaleta
+        states:
+          - heating.5
+          - zone.5
+        area: Toaleta
+      - id: climate6
+        name: Ogrzewanie emilia
+        states:
+          - heating.6
+          - zone.6
+        area: Pokój Emilii
+      - id: climate7
+        name: Ogrzewanie siłownia
+        states:
+          - heating.7
+          - zone.7
+        area: Siłownia
+      - id: climate8
+        name: Ogrzewanie duża łazienka
+        states:
+          - heating.8
+          - zone.8
+        area: Duża łazienka
+      - id: climate9
+        name: Ogrzewanie sypialnia
+        states:
+          - heating.9
+          - zone.9
+        area: Sypialnia
+      - id: climate10
+        name: Ogrzewanie gościnny
+        states:
+          - heating.10
+          - zone.10
+        area: Pokój gościnny
+      - id: climate11
+        name: Ogrzewanie mała łazienka
+        states:
+          - heating.11
+          - zone.11
+        area: Mała łazienka
+  - can_id: 6684
+    name: Ogrzewanie
+    model: 4
+    pcb: 5
+    area: Serwerownia
+    binary_sensors:
+      - id: switch1
+        name: Ogrzewanie przedpokój
+        area: Przedpokój
+        states:
+          - binout.25
+        device_class: heat
+      - id: switch2
+        name: Ogrzewanie garaż
+        area: Garaż
+        states:
+          - binout.26
+        device_class: heat
+      - id: switch3
+        name: Ogrzewanie salon
+        area: Salon
+        states:
+          - binout.27
+        device_class: heat
+      - id: switch4
+        name: Ogrzewanie gabinet
+        area: Gabinet
+        states:
+          - binout.28
+        device_class: heat
+      - id: switch5
+        name: Ogrzewanie toaleta
+        area: Toaleta
+        states:
+          - binout.29
+        device_class: heat
+      - id: switch6
+        name: Ogrzewanie emilia
+        area: Pokój Emilii
+        states:
+          - binout.30
+        device_class: heat
+      - id: switch7
+        name: Ogrzewanie siłownia
+        area: Siłownia
+        states:
+          - binout.31
+        device_class: heat
+      - id: switch8
+        name: Ogrzewanie duża łazienka
+        area: Duża łazienka
+        states:
+          - binout.32
+        device_class: heat
+  - can_id: 6686
+    name: Oświetlenie 1
+    model: 4
+    pcb: 5
+    sw_version: 10400
+    area: Serwerownia
+    binary_sensors:
+      - id: input1
+        name: Mała łazienka L
+        states:
+          - binout.1
+        area: Mała łazienka
+      - id: input2
+        name: Mała łazienka P
+        states:
+          - binout.2
+        area: Mała łazienka
+    lights:
+      - id: light1
+        name: Komoda
+        states:
+          - binout.25
+        area: Salon
+      - id: light2
+        name: Blat kuchenny
+        states:
+          - binout.26
+      - id: light3
+        name: Garaż boczne
+        states:
+          - binout.27
+        area: Garaż
+      - id: light4
+        name: Serwerownia
+        states:
+          - binout.28
+        area: Serwerownia
+      - id: light5
+        name: Garaż środkowe
+        states:
+          - binout.29
+        area: Garaż
+      - id: light6
+        name: Garaż tylne
+        states:
+          - binout.30
+        area: Garaż
+      - id: light7
+        name: Kotłownia
+        states:
+          - binout.31
+        area: Kotłownia
+      - id: light8
+        name: Galeryjki
+        states:
+          - binout.32
+        area: Korytarz
+    buttons:
+      - id: button1
+        name: Łazienka 1P Lewy
+        area: Mała łazienka
+        states:
+          - binout.25
+      - id: button2
+        name: Łazienka 1P Prawy
+        area: Mała łazienka
+        states:
+          - binout.26
+  - can_id: 6690
+    name: Oświetlenie zewnętrzne
+    model: 4
+    pcb: 5
+    sw_version: 10400
+    area: Serwerownia
+    binary_sensors:
+      - id: input1
+        name: Sypialnia łóżko LL
+        states:
+          - binout.1
+        area: Sypialnia
+      - id: input2
+        name: Sypialnia łóżko LP
+        states:
+          - binout.2
+        area: Sypialnia
+      - id: input3
+        name: Sypialnia łóżko PL
+        states:
+          - binout.3
+        area: Sypialnia
+      - id: input4
+        name: Sypialnia łóżko PL
+        states:
+          - binout.4
+        area: Sypialnia
+    lights:
+      - id: light1
+        name: Duże okno
+        states:
+          - binout.25
+        area: Ogród
+      - id: light2
+        name: E Elewacja
+        states:
+          - binout.26
+        area: Ogród
+      - id: light3
+        name: S Elewacja
+        states:
+          - binout.27
+        area: Ogród
+      - id: light4
+        name: W Elewacja
+        states:
+          - binout.28
+        area: Ogród
+      - id: light5
+        name: Bonsai
+        states:
+          - binout.29
+        area: Ogród
+      - id: light6
+        name: N Elewacja
+        states:
+          - binout.30
+        area: Ogród
+      - id: light7
+        name: Wejście
+        states:
+          - binout.31
+        area: Ogród
+      - id: light8
+        name: Taras nad garażem
+        states:
+          - binout.32
+        area: Ogród
+  - can_id: 6691
+    name: Szafa Rack
+    model: 4
+    pcb: 5
+    sw_version: 10400
+    area: Serwerownia
+    switches:
+      - id: switch1
+        name: Blokowanie alarmu
+        states:
+          - binout.25
+        area: Serwerownia
+      - id: switch2
+        name: Gniazda 2 poziom
+        states:
+          - binout.26
+        area: Serwerownia
+        device_class: outlet
+    binary_sensors:
+      - id: rain1
+        name: Czujnik deszczu
+        states:
+          - binout.1
+        area: Ogród
+        device_class: moisture
+  - can_id: 6880
+    name: Ogrzewanie 2 / Ośw. zewn.
+    model: 4
+    pcb: 5
+    sw_version: 10400
+    area: Serwerownia
+    binary_sensors:
+      - id: switch1
+        name: Ogrzewanie sypialnia
+        area: Sypialnia
+        states:
+          - binout.25
+        device_class: heat
+      - id: switch2
+        name: Ogrzewanie pokój gościnny
+        area: Pokój gościnny
+        states:
+          - binout.26
+        device_class: heat
+      - id: switch3
+        name: Ogrzewanie mała łazienka
+        area: Mała łazienka
+        states:
+          - binout.27
+        device_class: heat
+      - id: input1
+        name: Sypialnia garderoba L
+        states:
+          - binout.1
+        area: Sypialnia
+      - id: input2
+        name: Sypialnia garderoba P
+        states:
+          - binout.2
+        area: Sypialnia
+      - id: input3
+        name: Kuchnia blat L
+        states:
+          - binout.3
+        area: Kuchnia
+      - id: input4
+        name: Kuchnia blat P
+        states:
+          - binout.4
+        area: Kuchnia
+    lights:
+      - id: light4
+        name: Naświetlacz taras
+        states:
+          - binout.28
+        area: Ogród
+      - id: light5
+        name: Halogen nad garażem
+        states:
+          - binout.29
+        area: Ogród
+      - id: light6
+        name: Naświetlacz basen
+        states:
+          - binout.30
+        area: Ogród
+      - id: light7
+        name: Halogeny północ
+        states:
+          - binout.31
+        area: Ogród
+      - id: light8
+        name: Naświetlacz podjazd
+        states:
+          - binout.32
+        area: Ogród
+  - can_id: 9243
+    name: Przekazniki pomocnicze
+    model: 4
+    pcb: 7
+    sw_version: 10400
+    area: Serwerownia
+    switches:
+      - id: switch1
+        name: Rekuperator wilgotność
+        states:
+          - binout.25
+        area: Serwerownia
+      - id: switch2
+        name: Rekuperator wentylacja
+        states:
+          - binout.26
+        area: Serwerownia
+      - id: switch3
+        name: Rekuperator CO2
+        states:
+          - binout.27
+        area: Serwerownia
+      - id: switch4
+        name: Stycznik po wyjściu
+        states:
+          - binout.28
+        area: Serwerownia
+      - id: switch5
+        name: Stycznik wakacje
+        states:
+          - binout.29
+        area: Serwerownia
+      - id: switch6
+        name: Gniazdo taras
+        states:
+          - binout.30
+        area: Ogród
+        device_class: outlet
+      - id: switch7
+        name: Gniazdo ogród
+        states:
+          - binout.31
+        area: Ogród
+        device_class: outlet
+      - id: switch8
+        name: Gniazdo front
+        states:
+          - binout.32
+        area: Ogród
+        device_class: outlet
+  - can_id: 7770
+    name: Duża łazienka 10 Mała łazienka 06
+    model: 17
+    pcb: 3
+    sw_version: 10059
+    area: Serwerownia
+    lights:
+      - id: light1
+        name: MLED Duża łazienka 01
+        states:
+          - aout.1
+          - binout.25
+        area: Duża łazienka
+      - id: light2
+        name: MLED Duża łazienka 02
+        states:
+          - aout.2
+          - binout.26
+        area: Duża łazienka
+      - id: light3
+        name: MLED Duża łazienka 03
+        states:
+          - aout.3
+          - binout.27
+        area: Duża łazienka
+      - id: light4
+        name: MLED Duża łazienka 04
+        states:
+          - aout.4
+          - binout.28
+        area: Duża łazienka
+      - id: light5
+        name: MLED Duża łazienka 05
+        states:
+          - aout.5
+          - binout.29
+        area: Duża łazienka
+      - id: light6
+        name: MLED Duża łazienka 06
+        states:
+          - aout.6
+          - binout.30
+        area: Duża łazienka
+      - id: light7
+        name: MLED Duża łazienka 07
+        states:
+          - aout.7
+          - binout.31
+        area: Duża łazienka
+      - id: light8
+        name: MLED Duża łazienka 08
+        states:
+          - aout.8
+          - binout.32
+        area: Duża łazienka
+      - id: light9
+        name: MLED Duża łazienka 09
+        states:
+          - aout.9
+          - binout.33
+        area: Duża łazienka
+      - id: light10
+        name: MLED Duża łazienka 10
+        states:
+          - aout.10
+          - binout.34
+        area: Duża łazienka
+      - id: light11
+        name: MLED Mała łazienka 01
+        states:
+          - aout.11
+          - binout.35
+        area: Mała łazienka
+      - id: light12
+        name: MLED Mała łazienka 02
+        states:
+          - aout.12
+          - binout.36
+        area: Mała łazienka
+      - id: light13
+        name: MLED Mała łazienka 03
+        states:
+          - aout.13
+          - binout.37
+        area: Mała łazienka
+      - id: light14
+        name: MLED Mała łazienka 04
+        states:
+          - aout.14
+          - binout.38
+        area: Mała łazienka
+      - id: light15
+        name: MLED Mała łazienka 05
+        states:
+          - aout.15
+          - binout.39
+        area: Mała łazienka
+      - id: light16
+        name: MLED Mała łazienka 06
+        states:
+          - aout.16
+          - binout.40
+        area: Mała łazienka
+  - can_id: 7763
+    name: Wiatrołap 06 Toaleta 02 Prania 1
+    model: 17
+    pcb: 8
+    sw_version: 11701
+    area: Serwerownia
+    lights:
+      - id: light1
+        name: MLED Wiatrołap 01
+        states:
+          - aout.1
+          - binout.25
+        area: Przedpokój
+      - id: light2
+        name: MLED Wiatrołap 02
+        states:
+          - aout.2
+          - binout.26
+        area: Przedpokój
+      - id: light3
+        name: MLED Wiatrołap 03
+        states:
+          - aout.3
+          - binout.27
+        area: Przedpokój
+      - id: light4
+        name: MLED Wiatrołap 04
+        states:
+          - aout.4
+          - binout.28
+        area: Przedpokój
+      - id: light5
+        name: MLED Wiatrołap 05
+        states:
+          - aout.5
+          - binout.29
+        area: Przedpokój
+      - id: light6
+        name: MLED Wiatrołap 06
+        states:
+          - aout.6
+          - binout.30
+        area: Przedpokój
+      - id: light7
+        name: MLED Toaleta 01
+        states:
+          - aout.7
+          - binout.31
+        area: Toaleta
+      - id: light8
+        name: MLED Toaleta 02
+        states:
+          - aout.8
+          - binout.32
+        area: Toaleta
+      - id: light9
+        name: MLED Prania 01
+        states:
+          - aout.9
+          - binout.33
+        area: Pralnia
+  - can_id: 7775
+    name: Kuchnia 10 Sofa 06
+    model: 17
+    pcb: 8
+    sw_version: 11701
+    area: Serwerownia
+    lights:
+      - id: light1
+        name: MLED Kuchnia 01
+        states:
+          - aout.1
+          - binout.25
+        area: Kuchnia
+      - id: light2
+        name: MLED Kuchnia 02
+        states:
+          - aout.2
+          - binout.26
+        area: Kuchnia
+      - id: light3
+        name: MLED Kuchnia 03
+        states:
+          - aout.3
+          - binout.27
+        area: Kuchnia
+      - id: light4
+        name: MLED Kuchnia 04
+        states:
+          - aout.4
+          - binout.28
+        area: Kuchnia
+      - id: light5
+        name: MLED Kuchnia 05
+        states:
+          - aout.5
+          - binout.29
+        area: Kuchnia
+      - id: light6
+        name: MLED Kuchnia 06
+        states:
+          - aout.6
+          - binout.30
+        area: Kuchnia
+      - id: light7
+        name: MLED Kuchnia 07
+        states:
+          - aout.7
+          - binout.31
+        area: Kuchnia
+      - id: light8
+        name: MLED Kuchnia 08
+        states:
+          - aout.8
+          - binout.32
+        area: Kuchnia
+      - id: light9
+        name: MLED Kuchnia 09
+        states:
+          - aout.9
+          - binout.33
+        area: Kuchnia
+      - id: light10
+        name: MLED Kuchnia 10
+        states:
+          - aout.10
+          - binout.34
+        area: Kuchnia
+      - id: light11
+        name: MLED Sofa 01
+        states:
+          - aout.11
+          - binout.35
+        area: Salon
+      - id: light12
+        name: MLED Sofa 02
+        states:
+          - aout.12
+          - binout.36
+        area: Salon
+      - id: light13
+        name: MLED Sofa 03
+        states:
+          - aout.13
+          - binout.37
+        area: Salon
+      - id: light14
+        name: MLED Sofa 04
+        states:
+          - aout.14
+          - binout.38
+        area: Salon
+      - id: light15
+        name: MLED Sofa 05
+        states:
+          - aout.15
+          - binout.39
+        area: Salon
+      - id: light16
+        name: MLED Sofa 06
+        states:
+          - aout.16
+          - binout.40
+        area: Salon
+  - can_id: 7773
+    name: Salon 12 Przedpokój 04
+    model: 17
+    pcb: 8
+    sw_version: 11701
+    area: Serwerownia
+    lights:
+      - id: light1
+        name: MLED Salon 01
+        states:
+          - aout.1
+          - binout.25
+        area: Salon
+      - id: light2
+        name: MLED Salon 02
+        states:
+          - aout.2
+          - binout.26
+        area: Salon
+      - id: light3
+        name: MLED Salon 03
+        states:
+          - aout.3
+          - binout.27
+        area: Salon
+      - id: light4
+        name: MLED Salon 04
+        states:
+          - aout.4
+          - binout.28
+        area: Salon
+      - id: light5
+        name: MLED Salon 05
+        states:
+          - aout.5
+          - binout.29
+        area: Salon
+      - id: light6
+        name: MLED Salon 06
+        states:
+          - aout.6
+          - binout.30
+        area: Salon
+      - id: light7
+        name: MLED Salon 07
+        states:
+          - aout.7
+          - binout.31
+        area: Salon
+      - id: light8
+        name: MLED Salon 08
+        states:
+          - aout.8
+          - binout.32
+        area: Salon
+      - id: light9
+        name: MLED Salon 09
+        states:
+          - aout.9
+          - binout.33
+        area: Salon
+      - id: light10
+        name: MLED Salon 10
+        states:
+          - aout.10
+          - binout.34
+        area: Salon
+      - id: light11
+        name: MLED Salon 11
+        states:
+          - aout.11
+          - binout.35
+        area: Salon
+      - id: light12
+        name: MLED Salon 12
+        states:
+          - aout.12
+          - binout.36
+        area: Salon
+      - id: light13
+        name: MLED Przedpokój 01
+        states:
+          - aout.13
+          - binout.37
+        area: Przedpokój
+      - id: light14
+        name: MLED Przedpokój 02
+        states:
+          - aout.14
+          - binout.38
+        area: Przedpokój
+      - id: light15
+        name: MLED Przedpokój 03
+        states:
+          - aout.15
+          - binout.39
+        area: Przedpokój
+      - id: light16
+        name: MLED Przedpokój 04
+        states:
+          - aout.16
+          - binout.40
+        area: Przedpokój
+  - can_id: 7884
+    name: Satel
+    model: 25
+    pcb: 6
+    sw_version: 3001
+    area: Serwerownia
+    texts:
+      - id: text1
+        name: Status ostatniej komendy
+        states:
+          - response.1
+    alarm_control_panels:
+      - id: zone1
+        name: Parter
+        states:
+          - armed.1
+          - arming.1
+          - arming_10s.1
+          - breached.1
+          - alarm.1
+      - id: zone2
+        name: Piętro
+        states:
+          - armed.2
+          - arming.2
+          - arming_10s.2
+          - breached.2
+          - alarm.2
+      - id: zone3
+        name: Zewnętrzna
+        states:
+          - armed.3
+          - arming.3
+          - arming_10s.3
+          - breached.3
+          - alarm.3
+    binary_sensors:
+      - id: motion1
+        name: Wiatrołap
+        states: bin.1
+        device_class: motion
+        area: Przedpokój
+      - id: motion2
+        name: Garaż ogród
+        states: bin.2
+        device_class: motion
+        area: Garaż
+      - id: motion3
+        name: Garaż
+        states: bin.3
+        device_class: motion
+        area: Garaż
+      - id: motion4
+        name: Garderoba
+        states: bin.4
+        device_class: motion
+        area: Przedpokój
+      - id: motion5
+        name: Hall
+        states: bin.5
+        device_class: motion
+        area: Przedpokój
+      - id: motion6
+        name: Salon
+        states: bin.6
+        device_class: motion
+        area: Salon
+      - id: motion7
+        name: Kuchnia
+        states: bin.7
+        device_class: motion
+        area: Kuchnia
+      - id: motion8
+        name: Spiżarnia
+        states: bin.8
+        device_class: motion
+        area: Kuchnia
+      - id: motion9
+        name: Gabinet
+        states: bin.9
+        device_class: motion
+        area: Gabinet
+      - id: motion10
+        name: Ruch w serwerowni
+        states: bin.10
+        device_class: motion
+        area: Serwerownia
+      - id: motion11
+        name: Toaleta
+        states: bin.11
+        device_class: motion
+        area: Toaleta
+      - id: motion12
+        name: Korytarz
+        states: bin.12
+        device_class: motion
+        area: Korytarz
+      - id: motion13
+        name: Siłownia
+        states: bin.13
+        device_class: motion
+        area: Siłownia
+      - id: motion14
+        name: Garderoba siłownia
+        states: bin.14
+        device_class: motion
+        area: Siłownia
+      - id: motion15
+        name: Pokój Emilii
+        states: bin.15
+        device_class: motion
+        area: Pokój Emilii
+      - id: motion16
+        name: Garderoba Emilii
+        states: bin.16
+        device_class: motion
+        area: Pokój Emilii
+      - id: door17
+        name: Główna łazienka
+        states: bin.17
+        device_class: door
+        area: Duża łazienka
+      - id: motion18
+        name: Pralnia
+        states: bin.18
+        device_class: motion
+        area: Pralnia
+      - id: motion19
+        name: Pokój gościnny
+        states: bin.19
+        device_class: motion
+        area: Pokój gościnny
+      - id: motion20
+        name: Sypialnia Hall
+        states: bin.20
+        device_class: motion
+        area: Sypialnia
+      - id: motion21
+        name: Sypialnia
+        states: bin.21
+        device_class: motion
+        area: Sypialnia
+      - id: motion22
+        name: Sypialania garderoba
+        states: bin.22
+        device_class: motion
+        area: Sypialnia
+      - id: motion23
+        name: Ruch
+        states: bin.23
+        device_class: motion
+        area: Duża łazienka
+      - id: door24
+        name: Drzwi wejściowe
+        states: bin.24
+        device_class: door
+        area: Przedpokój
+      - id: lock25
+        name: Zamek
+        states: bin.25
+        device_class: lock
+        area: Przedpokój
+      - id: door26
+        name: Drzwi ogrodowe
+        states: bin.26
+        device_class: door
+        area: Garaż
+      - id: lock27
+        name: Zamek ogrodowy
+        states: bin.27
+        device_class: lock
+        area: Garaż
+      - id: contact28
+        name: Brama garażowa góra
+        states: bin.28
+        area: Garaż
+      - id: contact29
+        name: Brama garażowa dół
+        states: bin.29
+        area: Garaż
+      - id: door30
+        name: Garderoba
+        states: bin.30
+        device_class: door
+        area: Garaż
+      - id: door31
+        name: Garderoba
+        states: bin.31
+        device_class: door
+        area: Przedpokój
+      - id: door32
+        name: Kotłownia
+        states: bin.32
+        device_class: door
+        area: Kotłownia
+      - id: door33
+        name: Szklane drzwi
+        states: bin.33
+        device_class: door
+        area: Przedpokój
+      - id: door34
+        name: Toaleta
+        states: bin.34
+        device_class: door
+        area: Toaleta
+      - id: door35
+        name: Gabinet
+        states: bin.35
+        device_class: door
+        area: Gabinet
+      - id: door36
+        name: Serwerownia
+        states: bin.36
+        device_class: door
+        area: Serwerownia
+      - id: door37
+        name: Drzwi tarasowe
+        states: bin.37
+        device_class: door
+        area: Salon
+      - id: lock38
+        name: Zamek tarasowy
+        states: bin.38
+        device_class: lock
+        area: Salon
+      - id: door39
+        name: Spiżarnia
+        states: bin.39
+        device_class: door
+        area: Kuchnia
+      - id: window40
+        name: Okno kuchenne
+        states: bin.40
+        device_class: window
+        area: Kuchnia
+      - id: window41
+        name: Okno kuchenne uchył
+        states: bin.41
+        device_class: window
+        area: Kuchnia
+      - id: door42
+        name: Siłownia
+        states: bin.42
+        device_class: door
+        area: Siłownia
+      - id: door43
+        name: Garderoba
+        states: bin.43
+        device_class: door
+        area: Siłownia
+      - id: window44
+        name: Siłownia okno
+        states: bin.44
+        device_class: window
+        area: Siłownia
+      - id: window45
+        name: Siłownia okno uchył
+        states: bin.45
+        device_class: window
+        area: Siłownia
+      - id: door46
+        name: Pokój Emilii
+        states: bin.46
+        device_class: door
+        area: Pokój Emilii
+      - id: door47
+        name: Garderoba Emilii
+        states: bin.47
+        device_class: door
+        area: Pokój Emilii
+      - id: window48
+        name: Okno Emilii
+        states: bin.48
+        device_class: window
+        area: Pokój Emilii
+      - id: window49
+        name: Okno Emilii uchył
+        states: bin.49
+        device_class: window
+        area: Pokój Emilii
+      - id: motion50
+        name: Mała łazienka
+        states: bin.50
+        device_class: motion
+        area: Mała łazienka
+      - id: door51
+        name: Pralnia
+        states: bin.51
+        device_class: door
+        area: Pralnia
+      - id: window52
+        name: Okno pralni
+        states: bin.52
+        device_class: window
+        area: Pralnia
+      - id: window53
+        name: Okno pralni uchył
+        states: bin.53
+        device_class: window
+        area: Pralnia
+      - id: door54
+        name: Pokój gościnny
+        states: bin.54
+        device_class: door
+        area: Pokój gościnny
+      - id: window55
+        name: Okno w gościnnym
+        states: bin.55
+        device_class: window
+        area: Pokój gościnny
+      - id: window56
+        name: Okno w gościnnym uchył
+        states: bin.56
+        device_class: window
+        area: Pokój gościnny
+      - id: door57
+        name: Drzwi do sypialni
+        states: bin.57
+        device_class: door
+        area: Sypialnia
+      - id: door58
+        name: Drzwi dużej łazienki
+        states: bin.58
+        device_class: door
+        area: Duża łazienka
+      - id: moption59
+        name: Podjazd wschód
+        states: bin.59
+        device_class: motion
+        area: Ogród
+      - id: window60
+        name: Okno w sypialni uchył
+        states: bin.60
+        device_class: window
+        area: Sypialnia
+      - id: door61
+        name: Drzwi do garderoby
+        states: bin.61
+        device_class: door
+        area: Sypialnia
+      - id: window62
+        name: Okno w garderobie
+        states: bin.62
+        device_class: window
+        area: Sypialnia
+      - id: window63
+        name: Okno w garderobie uchył
+        states: bin.63
+        device_class: window
+        area: Sypialnia
+      - id: window64
+        name: Okno w dużej łazience
+        states: bin.64
+        device_class: window
+        area: Duża łazienka
+      - id: window65
+        name: Okno w dużej łazience uchył
+        states: bin.65
+        device_class: window
+        area: Duża łazienka
+      - id: moisture66
+        name: Wyciek w kotłowni
+        states: bin.66
+        device_class: moisture
+        area: Kotłownia
+      - id: moisture67
+        name: Wyciek w toalecie
+        states: bin.67
+        device_class: moisture
+        area: Toaleta
+      - id: moisture68
+        name: Wyciek pod zlewem
+        states: bin.68
+        device_class: moisture
+        area: Kuchnia
+      - id: moisture69
+        name: Wyciek pod lodówką
+        states: bin.69
+        device_class: moisture
+        area: Kuchnia
+      - id: moisture70
+        name: Wyciek w pralni
+        states: bin.70
+        device_class: moisture
+        area: Pralnia
+      - id: moisture71
+        name: Wyciek w małej łazience
+        states: bin.71
+        device_class: moisture
+        area: Mała łazienka
+      - id: moisture72
+        name: Wyciek w dużej łazience
+        states: bin.72
+        device_class: moisture
+        area: Duża łazienka
+      - id: gas74
+        name: Chloroform
+        states: bin.73
+        device_class: gas
+        area: Serwerownia
+      - id: gas75
+        name: Gaz ziemny
+        states: bin.74
+        device_class: gas
+        area: Kotłownia
+      - id: motion76
+        name: Ruch przed wejściem
+        states: bin.76
+        device_class: motion
+        area: Ogród
+      - id: motion77
+        name: Ruch przed garażem
+        states: bin.77
+        device_class: motion
+        area: Ogród
+      - id: motion78
+        name: Ruch ogródek południe
+        states: bin.78
+        device_class: motion
+        area: Ogród
+      - id: motion79
+        name: Ruch ogród zachód
+        states: bin.79
+        device_class: motion
+        area: Ogród
+      - id: motion80
+        name: Ruch taras zachód
+        states: bin.80
+        device_class: motion
+        area: Ogród
+      - id: motion81
+        name: Ruch północ
+        states: bin.81
+        device_class: motion
+        area: Ogród
+      - id: motion82
+        name: Ruch ogródek wschód
+        states: bin.82
+        device_class: motion
+        area: Ogród
+      - id: motion83
+        name: Ruch południe dach
+        states: bin.83
+        device_class: motion
+        area: Ogród
+      - id: motion84
+        name: Ruch schody dół
+        states: bin.84
+        device_class: motion
+        area: Salon
+      - id: gas85
+        name: Tlenek węgla
+        states: bin.85
+        device_class: carbon_monoxide
+        area: Kotłownia
+      - id: motion86
+        name: Korytarz2
+        states: bin.86
+        device_class: motion
+        area: Korytarz
+      - id: motion87
+        name: Ruch schody góra
+        states: bin.87
+        device_class: motion
+        area: Korytarz
+      - id: contact88
+        name: Blokada nocna
+        states: bin.88
+        area: Serwerownia
+      - id: contact110
+        name: Wyłączenie str 2
+        states: bin.110
+        area: Serwerownia
+      - id: contact111
+        name: Wyłączenie str 1
+        states: bin.111
+        area: Serwerownia
+      - id: contact112
+        name: Wyłączenie str 3
+        states: bin.112
+        area: Serwerownia
+      - id: contact113
+        name: Włączenie str 1
+        states: bin.113
+        area: Serwerownia
+      - id: contact114
+        name: Włączenie str 3
+        states: bin.114
+        area: Serwerownia
+      - id: contact115
+        name: Włączenie str 2
+        states: bin.115
+        area: Serwerownia
+  - can_id: 1
+    name: Ampio serwer
+    model: 10
+    pcb: 6
+    sw_version: 11605
+    area: Serwerownia
+    switches:
+      - id: switch7
+        name: Pompa studnia
+        states:
+          - binout.31
+        area: Ogród
+      - id: switch8
+        name: Nie wiadomo
+        area: Ogród
+        states:
+          - binout.32
+      - id: flag1
+        name: Blokada podlewania
+        states:
+          - flag.1
+        area: Ogród
+      - id: flag6
+        name: Podlewanie front
+        states:
+          - flag.6
+        area: Ogród
+      - id: flag7
+        name: Podlewanie bok
+        states:
+          - flag.7
+        area: Ogród
+      - id: flag8
+        name: Podlewanie basen
+        states:
+          - flag.8
+        area: Ogród
+      - id: flag9
+        name: Podlewanie taras
+        states:
+          - flag.9
+        area: Ogród
+      - id: flag10
+        name: Podlewanie rabaty
+        states:
+          - flag.10
+        area: Ogród
+      - id: flag11
+        name: Podlewanie warzywnik
+        states:
+          - flag.11
+        area: Ogród
+    binary_sensors:
+      - id: switch1
+        name: Podlewanie front
+        states:
+          - binout.25
+        area: Ogród
+      - id: switch2
+        name: Podlewanie bok
+        states:
+          - binout.26
+        area: Ogród
+      - id: switch3
+        name: Podlewanie basen
+        states:
+          - binout.27
+        area: Ogród
+      - id: switch4
+        name: Podlewanie taras
+        area: Ogród
+        states:
+          - binout.28
+      - id: switch5
+        name: Podlewanie strefa 5
+        area: Ogród
+        states:
+          - binout.29
+      - id: switch6
+        name: Linia kroplująca
+        area: Ogród
+        states:
+          - binout.30
+      - id: flag2
+        name: Zawór zbiornik
+        states:
+          - flag.2
+        area: Ogród
+      - id: flag3
+        name: Zawór woda miejska
+        states:
+          - flag.3
+        area: Ogród
+      - id: flag4
+        name: Praca zaworu
+        states:
+          - flag.4
+        area: Ogród
+      - id: flag5
+        name: Pompa studnia
+        states:
+          - flag.5
+        area: Ogród
+      - id: flag12
+        name: Podlewanie
+        states:
+          - flag.12
+        area: Ogród
+      - id: flag13
+        name: Silny wiatr
+        states:
+          - flag.13
+        area: Ogród
+  - can_id: 2
+    name: Ampio serwer 2
+    model: 10
+    pcb: 6
+    sw_version: 11605
+    area: Gabinet
+    switches:
+      - id: switch1
+        name: Ampio switch 1
+        states:
+          - binout.25
+      - id: switch2
+        name: Ampio switch 2
+        states:
+          - binout.26
+      - id: flag1
+        name: Ampio flag 1
+        states:
+          - flag.1
+  - can_id: 6506
+    name: Żaluzje 1
+    model: 3
+    pcb: 2
+    sw_version: 10400
+    area: Serwerownia
+    binary_sensors:
+      - id: input1
+        name: Duża łazienka LL
+        states:
+          - binout.1
+        area: Sypialnia
+      - id: input2
+        name: Duża łazienka LP
+        states:
+          - binout.2
+        area: Sypialnia
+      - id: input3
+        name: Duża łazienka PL
+        states:
+          - binout.3
+        area: Garaż
+      - id: input4
+        name: Duża łazienka PL
+        states:
+          - binout.4
+        area: Garaż
+    covers:
+      - id: cover1
+        name: S Salon
+        states:
+          - aout.1
+          - aout.7
+          - binout.25
+          - binout.26
+        area: Salon
+      - id: cover2
+        name: W Taras
+        states:
+          - aout.2
+          - aout.8
+          - binout.27
+          - binout.28
+        area: Salon
+      - id: cover3
+        name: N Kuchnia
+        states:
+          - aout.3
+          - aout.9
+          - binout.29
+          - binout.30
+        area: Kuchnia
+      - id: cover4
+        name: E Kuchnia
+        states:
+          - aout.4
+          - aout.10
+          - binout.31
+          - binout.32
+        area: Kuchnia
+  - can_id: 6504
+    name: Żaluzje 2
+    model: 3
+    pcb: 2
+    sw_version: 10400
+    area: Serwerownia
+    binary_sensors:
+      - id: input1
+        name: Garderoba L
+        states:
+          - binout.1
+        area: Sypialnia
+      - id: input2
+        name: Garderoba P
+        states:
+          - binout.2
+        area: Sypialnia
+      - id: input3
+        name: Garaż L
+        states:
+          - binout.3
+        area: Garaż
+      - id: input4
+        name: Garaż P
+        states:
+          - binout.4
+        area: Garaż
+    covers:
+      - id: cover1
+        name: W Bonsai
+        states:
+          - aout.1
+          - aout.7
+          - binout.25
+          - binout.26
+        area: Salon
+      - id: cover2
+        name: N Gabinet
+        states:
+          - aout.2
+          - aout.8
+          - binout.27
+          - binout.28
+        area: Gabinet
+      - id: cover3
+        name: W Gabinet
+        states:
+          - aout.3
+          - aout.9
+          - binout.29
+          - binout.30
+        area: Gabinet
+      - id: cover4
+        name: W Sypialnia
+        states:
+          - aout.4
+          - aout.10
+          - binout.31
+          - binout.32
+        area: Sypialnia
+  - can_id: 6501
+    name: Żaluzje 1
+    model: 3
+    pcb: 2
+    sw_version: 10400
+    area: Serwerownia
+    binary_sensors:
+      - id: input1
+        name: MIN (10)-poziom max
+        states:
+          - binout.1
+        area: Ogród
+      - id: input2
+        name: MIN (12)-poziom min
+        states:
+          - binout.2
+        area: Ogród
+      - id: input3
+        name: MAX (7)-poziom max
+        states:
+          - binout.3
+        area: Ogrod
+      - id: input4
+        name: MAX (9)-poziom min
+        states:
+          - binout.4
+        area: Ogród
+    covers:
+      - id: cover1
+        name: N Garderoba
+        states:
+          - aout.1
+          - aout.7
+          - binout.25
+          - binout.26
+        area: Sypialnia
+      - id: cover2
+        name: N Duża łazienka
+        states:
+          - aout.2
+          - aout.8
+          - binout.27
+          - binout.28
+        area: Duża łazienka
+      - id: cover3
+        name: E Siłownia
+        states:
+          - aout.3
+          - aout.9
+          - binout.29
+          - binout.30
+        area: Siłownia
+      - id: cover4
+        name: S Emilia
+        states:
+          - aout.4
+          - aout.10
+          - binout.31
+          - binout.32
+        area: Pokój Emilii
+  - can_id: 6954
+    name: Żaluzje 4
+    model: 3
+    pcb: 3
+    sw_version: 10400
+    area: Serwerownia
+    binary_sensors:
+      - id: input5
+        name: Garaż brama L
+        states:
+          - binout.5
+        area: Garaż
+      - id: input6
+        name: Garaż brama P
+        states:
+          - binout.6
+        area: Garaż
+    valves:
+      - id: valve3
+        name: Woda ze zbiornika
+        states:
+          - aout.3
+        area: Ogród
+    covers:
+      - id: cover1
+        name: S Pralnia
+        states:
+          - aout.1
+          - aout.7
+          - binout.25
+          - binout.26
+        area: Pralnia
+      - id: cover2
+        name: S Gościnny
+        states:
+          - aout.2
+          - aout.8
+          - binout.27
+          - binout.28
+        area: Pokój gościnny
+      - id: cover4
+        name: Brama garażowa
+        states:
+          - aout.4
+          - aout.10
+        area: Garaż
+        device_class: garage
