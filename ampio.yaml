@@ -1,7 +1,4 @@
-outputs:
-  []
-  # - type: stdout
-  #   format: "{timestamp} {dir} id=0x{id:08X} dlc={dlc} data={data_hex} {states} {payload}"
+outputs: []
 
 codecs:
   - module: aioampio.codec.ampio
