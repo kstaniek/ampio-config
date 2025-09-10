@@ -638,7 +638,7 @@ devices:
         states:
           - aout.6
           - binout.30
-        area: Korytarz
+        area: Salon
       - id: light7
         name: Emilia Garderoba
         states:
@@ -908,17 +908,6 @@ devices:
         states:
           - binout.32
         area: Korytarz
-    buttons:
-      - id: button1
-        name: Łazienka 1P Lewy
-        area: Mała łazienka
-        states:
-          - binout.25
-      - id: button2
-        name: Łazienka 1P Prawy
-        area: Mała łazienka
-        states:
-          - binout.26
   - can_id: 6690
     name: Oświetlenie zewnętrzne
     model: 4
