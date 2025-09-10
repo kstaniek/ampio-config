@@ -638,7 +638,7 @@ devices:
         states:
           - aout.6
           - binout.30
-        area: Salon
+        area: Korytarz
       - id: light7
         name: Emilia Garderoba
         states:
@@ -698,7 +698,7 @@ devices:
           - binout.26
           - binout.27
           - binout.28
-        area: Korytarz
+        area: Salon
   - can_id: 6277
     name: LED
     model: 26
