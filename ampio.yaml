@@ -2322,7 +2322,6 @@ devices:
           - binout.29
           - binout.30
         area: Ogród
-        device_class: water
     covers:
       - id: cover1
         name: S Pralnia
