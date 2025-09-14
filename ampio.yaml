@@ -1817,7 +1817,7 @@ devices:
         states: bin.58
         device_class: door
         area: Duża łazienka
-      - id: moption59
+      - id: motion59
         name: Podjazd wschód
         states: bin.59
         device_class: motion
@@ -2258,7 +2258,7 @@ devices:
         name: MAX (7)-poziom max
         states:
           - binout.3
-        area: Ogrod
+        area: Ogród
       - id: input4
         name: MAX (9)-poziom min
         states:
@@ -2319,6 +2319,8 @@ devices:
         name: Woda ze zbiornika
         states:
           - aout.3
+          - binout.29
+          - binout.30
         area: Ogród
     covers:
       - id: cover1
@@ -2341,6 +2343,7 @@ devices:
         name: Brama garażowa
         states:
           - aout.4
-          - aout.10
+          - binout.31
+          - binout.32
         area: Garaż
         device_class: garage
