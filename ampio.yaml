@@ -1610,10 +1610,10 @@ devices:
         device_class: motion
         area: Pokój Emilii
       - id: door17
-        name: Główna łazienka
+        name: Drzwi małej łazienki
         states: bin.17
         device_class: door
-        area: Duża łazienka
+        area: Mała łazienka
       - id: motion18
         name: Pralnia
         states: bin.18
