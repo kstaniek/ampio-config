@@ -541,6 +541,41 @@ devices:
         name: Ciśnienie względne
         states: s16b10000.6
         device_class: atmospheric_pressure
+  - can_id: 28477
+    name: Sypialnia
+    model: 44
+    pcb: 3
+    sw_version: 1
+    area: Sypialnia
+    sensors:
+      - id: temperature1
+        name: Temperatura
+        device_class: temperature
+        states: temperature.1
+      - id: humidity1
+        name: Wilgotność
+        states: s16b10000.1
+        device_class: humidity
+      - id: aap1
+        name: Ciśnienie bezwzględne
+        states: s16b10000.2
+        device_class: atmospheric_pressure
+      - id: noise1
+        name: Hałas
+        states: s16b10000.3
+        device_class: sound_pressure
+      - id: brightness1
+        name: Jasność
+        states: s16b10000.4
+        device_class: illuminance
+      - id: aqi1
+        name: Jakość powietrza
+        states: s16b10000.5
+        device_class: aqi
+      - id: rap1
+        name: Ciśnienie względne
+        states: s16b10000.6
+        device_class: atmospheric_pressure
   - can_id: 6599
     name: Ściemniacz 1
     model: 5
@@ -878,6 +913,7 @@ devices:
         name: Blat kuchenny
         states:
           - binout.26
+        area: Kuchnia
       - id: light3
         name: Garaż boczne
         states:
@@ -1889,12 +1925,12 @@ devices:
         area: Duża łazienka
       - id: gas74
         name: Chloroform
-        states: bin.73
+        states: bin.74
         device_class: gas
         area: Serwerownia
       - id: gas75
         name: Gaz ziemny
-        states: bin.74
+        states: bin.75
         device_class: gas
         area: Kotłownia
       - id: motion76
@@ -2128,22 +2164,22 @@ devices:
         name: Duża łazienka LL
         states:
           - binout.1
-        area: Sypialnia
+        area: Duża łazienka
       - id: input2
         name: Duża łazienka LP
         states:
           - binout.2
-        area: Sypialnia
+        area: Duża łazienka
       - id: input3
         name: Duża łazienka PL
         states:
           - binout.3
-        area: Garaż
+        area: Duża łazienka
       - id: input4
-        name: Duża łazienka PL
+        name: Duża łazienka PP
         states:
           - binout.4
-        area: Garaż
+        area: Duża łazienka
     covers:
       - id: cover1
         name: S Salon
