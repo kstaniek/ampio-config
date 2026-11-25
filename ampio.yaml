@@ -1,7 +1,5 @@
 ---
 outputs: []
-codecs:
-  - module: aioampio.codec.ampio
 floors:
   - id: parter1
     name: Parter
