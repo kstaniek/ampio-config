@@ -1162,6 +1162,31 @@ devices:
     pcb: 3
     sw_version: 10059
     area: Serwerownia
+    light_groups:
+      - id: mled_duza_lazienka
+        name: MLED Duża łazienka
+        area: Duża łazienka
+        members:
+          - light1
+          - light2
+          - light3
+          - light4
+          - light5
+          - light6
+          - light7
+          - light8
+          - light9
+          - light10
+      - id: mled_mala_lazienka
+        name: MLED Mała łazienka
+        area: Mała łazienka
+        members:
+          - light11
+          - light12
+          - light13
+          - light14
+          - light15
+          - light16
     lights:
       - id: light1
         name: MLED Duża łazienka 01
@@ -1265,6 +1290,23 @@ devices:
     pcb: 8
     sw_version: 11701
     area: Serwerownia
+    light_groups:
+      - id: mled_wiatrolap
+        name: MLED Wiatrołap
+        area: Przedpokój
+        members:
+          - light1
+          - light2
+          - light3
+          - light4
+          - light5
+          - light6
+      - id: mled_toaleta
+        name: MLED Toaleta
+        area: Toaleta
+        members:
+          - light7
+          - light8
     lights:
       - id: light1
         name: MLED Wiatrołap 01
@@ -1326,6 +1368,31 @@ devices:
     pcb: 8
     sw_version: 11701
     area: Serwerownia
+    light_groups:
+      - id: mled_kuchnia
+        name: MLED Kuchnia
+        area: Kuchnia
+        members:
+          - light1
+          - light2
+          - light3
+          - light4
+          - light5
+          - light6
+          - light7
+          - light8
+          - light9
+          - light10
+      - id: mled_sofa
+        name: MLED Sofa
+        area: Salon
+        members:
+          - light11
+          - light12
+          - light13
+          - light14
+          - light15
+          - light16
     lights:
       - id: light1
         name: MLED Kuchnia 01
@@ -1429,6 +1496,31 @@ devices:
     pcb: 8
     sw_version: 11701
     area: Serwerownia
+    light_groups:
+      - id: mled_salon
+        name: MLED Salon
+        area: Salon
+        members:
+          - light1
+          - light2
+          - light3
+          - light4
+          - light5
+          - light6
+          - light7
+          - light8
+          - light9
+          - light10
+          - light11
+          - light12
+      - id: mled_przedpokoj
+        name: MLED Przedpokój
+        area: Przedpokój
+        members:
+          - light13
+          - light14
+          - light15
+          - light16
     lights:
       - id: light1
         name: MLED Salon 01
