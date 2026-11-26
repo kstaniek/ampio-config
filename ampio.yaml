@@ -942,6 +942,14 @@ devices:
         states:
           - binout.32
         area: Korytarz
+    light_groups:
+      - id: garaz
+        name: Garaż
+        area: Garaż
+        members:
+          - light3
+          - light5
+          - light6
   - can_id: 6690
     name: Oświetlenie zewnętrzne
     model: 4
