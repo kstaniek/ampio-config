@@ -1732,7 +1732,7 @@ devices:
         device_class: motion
         area: Serwerownia
       - id: motion11
-        name: Toaleta
+        name: Ruch
         states: bin.11
         device_class: motion
         area: Toaleta
@@ -1845,7 +1845,7 @@ devices:
         device_class: door
         area: Przedpokój
       - id: door34
-        name: Toaleta
+        name: Drzwi
         states: bin.34
         device_class: door
         area: Toaleta
