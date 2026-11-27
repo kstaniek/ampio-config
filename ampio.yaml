@@ -975,7 +975,7 @@ devices:
           - binout.3
         area: Sypialnia
       - id: input4
-        name: Sypialnia łóżko PL
+        name: Sypialnia łóżko PP
         states:
           - binout.4
         area: Sypialnia
