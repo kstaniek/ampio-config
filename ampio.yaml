@@ -946,6 +946,8 @@ devices:
       - id: garaz
         name: Garaż
         area: Garaż
+        members_enabled: true
+        members_visible: false
         members:
           - light3
           - light5
@@ -1174,6 +1176,8 @@ devices:
       - id: mled_duza_lazienka
         name: MLED Duża łazienka
         area: Duża łazienka
+        members_enabled: true
+        members_visible: false
         members:
           - light1
           - light2
@@ -1188,6 +1192,8 @@ devices:
       - id: mled_mala_lazienka
         name: MLED Mała łazienka
         area: Mała łazienka
+        members_enabled: true
+        members_visible: false
         members:
           - light11
           - light12
@@ -1302,6 +1308,8 @@ devices:
       - id: mled_wiatrolap
         name: MLED Wiatrołap
         area: Przedpokój
+        members_enabled: true
+        members_visible: false
         members:
           - light1
           - light2
@@ -1312,6 +1320,8 @@ devices:
       - id: mled_toaleta
         name: MLED Toaleta
         area: Toaleta
+        members_enabled: true
+        members_visible: false
         members:
           - light7
           - light8
@@ -1380,6 +1390,8 @@ devices:
       - id: mled_kuchnia
         name: MLED Kuchnia
         area: Kuchnia
+        members_enabled: true
+        members_visible: false
         members:
           - light1
           - light2
@@ -1394,6 +1406,8 @@ devices:
       - id: mled_sofa
         name: MLED Sofa
         area: Salon
+        members_enabled: true
+        members_visible: false
         members:
           - light11
           - light12
@@ -1508,6 +1522,8 @@ devices:
       - id: mled_salon
         name: MLED Salon
         area: Salon
+        members_enabled: true
+        members_visible: false
         members:
           - light1
           - light2
@@ -1524,6 +1540,8 @@ devices:
       - id: mled_przedpokoj
         name: MLED Przedpokój
         area: Przedpokój
+        members_enabled: true
+        members_visible: false
         members:
           - light13
           - light14
